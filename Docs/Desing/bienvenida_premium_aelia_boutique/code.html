@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Aelia Boutique - Elegancia Sin Esfuerzo</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "on-surface-variant": "#514345",
+                                                "tertiary-container": "#9ac2a2",
+                                                "surface-dim": "#e2d8d8",
+                                                "background": "#fff8f7",
+                                                "tertiary-fixed-dim": "#a8d0b0",
+                                                "soft-gray": "#F5F5F5",
+                                                "on-primary-container": "#693b43",
+                                                "on-tertiary-container": "#2c5037",
+                                                "outline-variant": "#d5c2c4",
+                                                "inverse-surface": "#352f2f",
+                                                "on-surface": "#1f1a1b",
+                                                "secondary": "#775a19",
+                                                "on-secondary-container": "#785a1a",
+                                                "primary-container": "#e5a8b1",
+                                                "outline": "#837375",
+                                                "blush-silk": "#FDF3F4",
+                                                "on-error-container": "#93000a",
+                                                "surface-bright": "#fff8f7",
+                                                "secondary-fixed": "#ffdea5",
+                                                "inverse-on-surface": "#f9eeee",
+                                                "on-tertiary": "#ffffff",
+                                                "surface-container-highest": "#ebe0e0",
+                                                "on-secondary": "#ffffff",
+                                                "on-primary-fixed": "#330f17",
+                                                "tertiary": "#42664c",
+                                                "on-secondary-fixed": "#261900",
+                                                "ink-black": "#1A1A1A",
+                                                "surface": "#fff8f7",
+                                                "surface-container-high": "#f0e6e6",
+                                                "error-container": "#ffdad6",
+                                                "primary": "#825159",
+                                                "surface-tint": "#825159",
+                                                "tertiary-fixed": "#c3edcb",
+                                                "surface-container-low": "#fcf1f1",
+                                                "secondary-container": "#fed488",
+                                                "error": "#ba1a1a",
+                                                "on-error": "#ffffff",
+                                                "secondary-fixed-dim": "#e9c176",
+                                                "primary-fixed-dim": "#f5b6bf",
+                                                "antique-gold": "#B38B4D",
+                                                "on-tertiary-fixed": "#00210e",
+                                                "on-background": "#1f1a1b",
+                                                "on-secondary-fixed-variant": "#5d4201",
+                                                "on-primary": "#ffffff",
+                                                "surface-container-lowest": "#ffffff",
+                                                "surface-variant": "#ebe0e0",
+                                                "primary-fixed": "#ffd9de",
+                                                "surface-container": "#f6ebec",
+                                                "on-primary-fixed-variant": "#673a42",
+                                                "inverse-primary": "#f5b6bf",
+                                                "on-tertiary-fixed-variant": "#2a4e35"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.125rem",
+                                                "lg": "0.25rem",
+                                                "xl": "0.5rem",
+                                                "full": "0.75rem"
+                                        },
+                                        "spacing": {
+                                                "stack-lg": "32px",
+                                                "gutter": "24px",
+                                                "stack-md": "16px",
+                                                "section-gap": "120px",
+                                                "container-max": "1440px",
+                                                "margin-desktop": "64px",
+                                                "stack-sm": "8px",
+                                                "margin-mobile": "20px"
+                                        },
+                                        "fontFamily": {
+                                                "headline-lg-mobile": ["Libre Caslon Text"],
+                                                "label-md": ["Hanken Grotesk"],
+                                                "display-lg": ["Libre Caslon Text"],
+                                                "body-lg": ["Hanken Grotesk"],
+                                                "body-md": ["Hanken Grotesk"],
+                                                "headline-lg": ["Libre Caslon Text"],
+                                                "headline-md": ["Libre Caslon Text"],
+                                                "title-lg": ["Hanken Grotesk"],
+                                                "label-sm": ["Hanken Grotesk"]
+                                        },
+                                        "fontSize": {
+                                                "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                                                "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                                                "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                                                "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                                                "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                                                "headline-lg": ["40px", { "lineHeight": "48px", "fontWeight": "400" }],
+                                                "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "400" }],
+                                                "title-lg": ["20px", { "lineHeight": "28px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                                                "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }]
+                                        }
+                                },
+                        },
+                }
+        </script>
+        <style>
+                /* Custom background to simulate the requested aesthetic while staying within the tech constraints */
+                .bio-bg {
+                        background-color: #0A0A0A;
+                        background-image: radial-gradient(circle at 50% 30%, rgba(125, 81, 89, 0.15) 0%, rgba(10, 10, 10, 1) 70%);
+                        min-height: 100vh;
+                }
+
+                .glass-btn {
+                        background: rgba(255, 255, 255, 0.03);
+                        backdrop-filter: blur(10px);
+                        border: 1px solid rgba(179, 139, 77, 0.1);
+                        transition: all 0.3s ease;
+                }
+
+                .glass-btn:hover {
+                        background: rgba(255, 255, 255, 0.08);
+                        border-color: rgba(179, 139, 77, 0.3);
+                        transform: translateY(-2px);
+                }
+
+                .primary-glass-btn {
+                        background: linear-gradient(135deg, rgba(179, 139, 77, 0.8) 0%, rgba(130, 81, 89, 0.8) 100%);
+                        box-shadow: 0 8px 32px 0 rgba(179, 139, 77, 0.2);
+                        backdrop-filter: blur(4px);
+                        border: 1px solid rgba(255, 255, 255, 0.18);
+                }
+
+                .primary-glass-btn:hover {
+                        box-shadow: 0 12px 40px 0 rgba(179, 139, 77, 0.3);
+                        transform: translateY(-2px);
+                }
+        </style>
+</head>
+
+<body
+        class="bio-bg text-on-surface antialiased flex flex-col items-center justify-center p-margin-mobile md:p-margin-desktop min-h-screen">
+        <!-- Suppressed Nav Shell as this is a linear/transactional landing page -->
+        <main class="w-full max-w-md mx-auto flex flex-col items-center z-10 relative">
+                <!-- Logo Header -->
+                <div class="mb-stack-lg flex flex-col items-center">
+                        <div
+                                class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden mb-stack-md border-2 border-antique-gold/20 shadow-2xl relative">
+                                <img alt="Aelia Boutique Logo" class="w-full h-full object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBScpVpYfcpHxZZRvXQOoKdEnHTk-0ZpzzaCalD9vNanQRqK1eKC1VR8kMJ2GUS3E4INN-VelohxBAOQSLRWGITv0OjaVTRrD0wgLjl4DtDtWUffk02YRV2dwyFA3E88_RdYkEmYbA5RzIZX34brykZ3Ucv7NJIZ4t9fqjo5s13tlKPV5Ad_PhfFQ0pjfMvHHqoEmhupe0oNXxBRfQ33KrCQU3ObDsZoZRx3gkh41ZJXjS_x-7cbEbU08xguyMTAF4bJg" />
+                        </div>
+                        <h1
+                                class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary-fixed-dim text-center tracking-wide">
+                                Aelia Boutique
+                        </h1>
+                        <p
+                                class="font-title-lg text-title-lg text-antique-gold/80 mt-2 text-center uppercase tracking-[0.2em]">
+                                Elegancia Sin Esfuerzo
+                        </p>
+                </div>
+                <!-- Links Container -->
+                <div class="w-full flex flex-col gap-stack-sm md:gap-stack-md">
+                        <!-- Primary Action (Store) -->
+                        <a class="primary-glass-btn rounded-xl p-4 w-full flex items-center justify-between group cursor-pointer text-white"
+                                href="/home">
+                                <div class="flex items-center gap-4">
+                                        <div
+                                                class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                                                <span class="material-symbols-outlined"
+                                                        style="font-variation-settings: 'FILL' 1;">storefront</span>
+                                        </div>
+                                        <div class="flex flex-col">
+                                                <span
+                                                        class="font-label-sm text-label-sm text-white/70 uppercase tracking-widest">Explorar</span>
+                                                <span class="font-body-lg text-body-lg font-semibold">Tienda
+                                                        Virtual</span>
+                                        </div>
+                                </div>
+                                <span
+                                        class="material-symbols-outlined text-white/70 group-hover:text-white transition-colors group-hover:translate-x-1 duration-300">arrow_forward</span>
+                        </a>
+                        <!-- Social/Contact Actions -->
+                        <a class="glass-btn rounded-xl p-4 w-full flex items-center justify-between group cursor-pointer text-surface-dim"
+                                href="#">
+                                <div class="flex items-center gap-4">
+                                        <div
+                                                class="w-10 h-10 rounded-full bg-[#25D366]/20 flex items-center justify-center text-[#25D366]">
+                                                <span class="material-symbols-outlined"
+                                                        style="font-variation-settings: 'FILL' 1;">chat</span>
+                                        </div>
+                                        <div class="flex flex-col">
+                                                <span
+                                                        class="font-label-sm text-label-sm text-antique-gold/70 uppercase tracking-widest">Whatsapp</span>
+                                                <span class="font-body-md text-body-md text-white/90">Escríbenos
+                                                        directo</span>
+                                        </div>
+                                </div>
+                                <span
+                                        class="material-symbols-outlined text-white/30 group-hover:text-antique-gold transition-colors">north_east</span>
+                        </a>
+                        <a class="glass-btn rounded-xl p-4 w-full flex items-center justify-between group cursor-pointer text-surface-dim"
+                                href="#">
+                                <div class="flex items-center gap-4">
+                                        <div
+                                                class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] flex items-center justify-center opacity-80">
+                                                <span class="material-symbols-outlined text-white"
+                                                        style="font-variation-settings: 'FILL' 1;">photo_camera</span>
+                                        </div>
+                                        <div class="flex flex-col">
+                                                <span
+                                                        class="font-label-sm text-label-sm text-antique-gold/70 uppercase tracking-widest">Instagram</span>
+                                                <span class="font-body-md text-body-md text-white/90">Nuestras
+                                                        colecciones</span>
+                                        </div>
+                                </div>
+                                <span
+                                        class="material-symbols-outlined text-white/30 group-hover:text-antique-gold transition-colors">north_east</span>
+                        </a>
+                        <a class="glass-btn rounded-xl p-4 w-full flex items-center justify-between group cursor-pointer text-surface-dim"
+                                href="#">
+                                <div class="flex items-center gap-4">
+                                        <div
+                                                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white">
+                                                <!-- Using play_arrow as a proxy for generic video/tiktok -->
+                                                <span class="material-symbols-outlined"
+                                                        style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                        </div>
+                                        <div class="flex flex-col">
+                                                <span
+                                                        class="font-label-sm text-label-sm text-antique-gold/70 uppercase tracking-widest">Tiktok</span>
+                                                <span class="font-body-md text-body-md text-white/90">Síguenos y mira
+                                                        nuestros videos</span>
+                                        </div>
+                                </div>
+                                <span
+                                        class="material-symbols-outlined text-white/30 group-hover:text-antique-gold transition-colors">north_east</span>
+                        </a>
+                        <a class="glass-btn rounded-xl p-4 w-full flex items-center justify-between group cursor-pointer text-surface-dim"
+                                href="#">
+                                <div class="flex items-center gap-4">
+                                        <div
+                                                class="w-10 h-10 rounded-full bg-[#1877F2]/20 flex items-center justify-center text-[#1877F2]">
+                                                <span class="material-symbols-outlined"
+                                                        style="font-variation-settings: 'FILL' 1;">public</span>
+                                        </div>
+                                        <div class="flex flex-col">
+                                                <span
+                                                        class="font-label-sm text-label-sm text-antique-gold/70 uppercase tracking-widest">Facebook</span>
+                                                <span class="font-body-md text-body-md text-white/90">Página
+                                                        oficial</span>
+                                        </div>
+                                </div>
+                                <span
+                                        class="material-symbols-outlined text-white/30 group-hover:text-antique-gold transition-colors">north_east</span>
+                        </a>
+                        <a class="glass-btn rounded-xl p-4 w-full flex items-center justify-between group cursor-pointer text-surface-dim"
+                                href="#">
+                                <div class="flex items-center gap-4">
+                                        <div
+                                                class="w-10 h-10 rounded-full bg-error/20 flex items-center justify-center text-primary-fixed-dim">
+                                                <span class="material-symbols-outlined"
+                                                        style="font-variation-settings: 'FILL' 1;">location_on</span>
+                                        </div>
+                                        <div class="flex flex-col">
+                                                <span
+                                                        class="font-label-sm text-label-sm text-antique-gold/70 uppercase tracking-widest">Ubicación</span>
+                                                <span class="font-body-md text-body-md text-white/90">Encuéntranos en el
+                                                        mapa</span>
+                                        </div>
+                                </div>
+                                <span
+                                        class="material-symbols-outlined text-white/30 group-hover:text-antique-gold transition-colors">north_east</span>
+                        </a>
+                </div>
+                <!-- Footer Indicator -->
+                <div class="mt-section-gap mb-stack-md flex items-center justify-center">
+                        <div
+                                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
+                                <div class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></div>
+                                <span class="font-label-sm text-label-sm text-white/50 uppercase tracking-widest">Atención
+                                        disponible 24/7</span>
+                        </div>
+                </div>
+        </main>
+        <!-- Suppressed Footer Shell as this is a linear landing page -->
+</body>
+
+</html>

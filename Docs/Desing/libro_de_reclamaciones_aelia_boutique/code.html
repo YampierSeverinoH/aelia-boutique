@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Libro de Reclamaciones - Aelia Boutique</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Libre+Caslon+Text:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed": "#00210e",
+                      "on-primary-fixed-variant": "#673a42",
+                      "primary": "#825159",
+                      "on-background": "#1f1a1b",
+                      "on-tertiary-fixed-variant": "#2a4e35",
+                      "outline-variant": "#d5c2c4",
+                      "surface-tint": "#825159",
+                      "surface-container": "#f6ebec",
+                      "on-error": "#ffffff",
+                      "on-surface": "#1f1a1b",
+                      "ink-black": "#1A1A1A",
+                      "surface-bright": "#fff8f7",
+                      "on-secondary-fixed": "#261900",
+                      "background": "#fff8f7",
+                      "on-primary-fixed": "#330f17",
+                      "primary-container": "#e5a8b1",
+                      "inverse-surface": "#352f2f",
+                      "on-tertiary-container": "#2c5037",
+                      "tertiary-fixed": "#c3edcb",
+                      "tertiary-container": "#9ac2a2",
+                      "secondary-fixed-dim": "#e9c176",
+                      "surface-dim": "#e2d8d8",
+                      "error": "#ba1a1a",
+                      "on-secondary-fixed-variant": "#5d4201",
+                      "outline": "#837375",
+                      "on-primary": "#ffffff",
+                      "inverse-primary": "#f5b6bf",
+                      "on-secondary-container": "#785a1a",
+                      "error-container": "#ffdad6",
+                      "surface-container-low": "#fcf1f1",
+                      "secondary-fixed": "#ffdea5",
+                      "primary-fixed-dim": "#f5b6bf",
+                      "on-surface-variant": "#514345",
+                      "soft-gray": "#F5F5F5",
+                      "surface-variant": "#ebe0e0",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-container": "#fed488",
+                      "inverse-on-surface": "#f9eeee",
+                      "on-error-container": "#93000a",
+                      "antique-gold": "#B38B4D",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed-dim": "#a8d0b0",
+                      "tertiary": "#42664c",
+                      "blush-silk": "#FDF3F4",
+                      "surface": "#fff8f7",
+                      "surface-container-highest": "#ebe0e0",
+                      "on-primary-container": "#693b43",
+                      "primary-fixed": "#ffd9de",
+                      "on-secondary": "#ffffff",
+                      "surface-container-high": "#f0e6e6",
+                      "secondary": "#775a19"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "stack-lg": "32px",
+                      "gutter": "24px",
+                      "container-max": "1440px",
+                      "stack-sm": "8px",
+                      "margin-mobile": "20px",
+                      "stack-md": "16px",
+                      "section-gap": "120px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Libre Caslon Text"
+                      ],
+                      "display-lg": [
+                              "Libre Caslon Text"
+                      ],
+                      "label-sm": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Libre Caslon Text"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "title-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Libre Caslon Text"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "72px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.08em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "title-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .form-input {
+            border: none;
+            border-bottom: 1px solid theme('colors.outline-variant');
+            background: transparent;
+            padding-left: 0;
+            padding-right: 0;
+            border-radius: 0;
+            width: 100%;
+        }
+        .form-input:focus {
+            outline: none;
+            box-shadow: none;
+            border-bottom-color: theme('colors.primary');
+        }
+        .form-select {
+            border: none;
+            border-bottom: 1px solid theme('colors.outline-variant');
+            background: transparent;
+            padding-left: 0;
+            padding-right: 0;
+            border-radius: 0;
+            width: 100%;
+        }
+        .form-select:focus {
+            outline: none;
+            box-shadow: none;
+            border-bottom-color: theme('colors.primary');
+        }
+        .form-textarea {
+            border: 1px solid theme('colors.outline-variant');
+            background: theme('colors.surface-bright');
+            border-radius: theme('borderRadius.DEFAULT');
+            width: 100%;
+            padding: theme('spacing.stack-sm');
+        }
+        .form-textarea:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: theme('colors.primary');
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-on-tertiary-fixed w-full sticky top-0 z-50 border-b border-outline-variant/30 bg-surface/80 backdrop-blur-md">
+<div class="flex justify-between items-center max-w-[1440px] mx-auto px-margin-desktop py-stack-md max-md:px-margin-mobile">
+<!-- Brand -->
+<a class="font-headline-lg text-headline-lg max-md:font-headline-lg-mobile max-md:text-headline-lg-mobile tracking-widest text-primary dark:text-primary-fixed-dim hover:opacity-70 transition-opacity" href="#">
+                Aelia Boutique
+            </a>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex gap-gutter font-headline-md text-headline-md font-label-md text-label-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Shop</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Contact</a>
+</div>
+<!-- Trailing Icons -->
+<div class="flex gap-stack-md text-primary dark:text-primary-fixed-dim">
+<button aria-label="shopping_bag" class="hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button aria-label="person" class="hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<!-- Mobile Menu Toggle -->
+<button aria-label="menu" class="md:hidden hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-desktop py-section-gap max-md:px-margin-mobile max-md:py-stack-lg">
+<header class="mb-stack-lg text-center md:text-left">
+<h1 class="font-display-lg text-display-lg max-md:font-headline-lg-mobile max-md:text-headline-lg-mobile text-primary mb-stack-sm">Libro de Reclamaciones</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Conforme a lo establecido en el Código de Protección y Defensa del Consumidor, esta institución cuenta con un Libro de Reclamaciones Virtual a su disposición.
+            </p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Information Panel -->
+<div class="lg:col-span-4 bg-surface-container-low p-stack-lg rounded-xl h-fit border border-outline-variant/20">
+<h2 class="font-title-lg text-title-lg text-on-surface mb-stack-md">Información del Proveedor</h2>
+<div class="space-y-stack-sm font-body-md text-body-md text-on-surface-variant">
+<p><strong>Razón Social:</strong> Aelia Boutique S.A.C.</p>
+<p><strong>RUC:</strong> 20123456789</p>
+<p><strong>Dirección:</strong> Av. de la Moda 123, Distrito Central, Lima, Perú.</p>
+<p><strong>Email:</strong> atencion@aeliaboutique.com</p>
+</div>
+<div class="mt-stack-lg pt-stack-lg border-t border-outline-variant/30">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-stack-sm text-sm">Definiciones</h3>
+<div class="space-y-stack-md font-body-md text-body-md text-on-surface-variant text-sm">
+<p><strong>Reclamo:</strong> Disconformidad relacionada a los productos o servicios.</p>
+<p><strong>Queja:</strong> Disconformidad no relacionada a los productos o servicios; o, malestar o descontento respecto a la atención al público.</p>
+</div>
+</div>
+</div>
+<!-- Form -->
+<div class="lg:col-span-8 bg-surface-bright p-stack-lg md:p-margin-desktop rounded-xl border border-outline-variant/20 shadow-sm">
+<form action="#" class="space-y-section-gap max-md:space-y-stack-lg" method="POST">
+<!-- Section 1: Consumer Info -->
+<section class="space-y-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary border-b border-outline-variant/30 pb-stack-sm">1. Identificación del Consumidor Reclamante</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div>
+<label class="font-label-md text-label-md text-on-surface-variant block mb-1" for="nombres">Nombres</label>
+<input class="form-input font-body-md text-body-md text-on-surface" id="nombres" name="nombres" required="" type="text"/>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface-variant block mb-1" for="apellidos">Apellidos</label>
+<input class="form-input font-body-md text-body-md text-on-surface" id="apellidos" name="apellidos" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div>
+<label class="font-label-md text-label-md text-on-surface-variant block mb-1" for="tipo_doc">Tipo de Documento</label>
+<select class="form-select font-body-md text-body-md text-on-surface" id="tipo_doc" name="tipo_doc" required="">
+<option disabled="" selected="" value="">Seleccionar...</option>
+<option value="DNI">DNI</option>
+<option value="CE">Carnet de Extranjería</option>
+<option value="Pasaporte">Pasaporte</option>
+</select>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface-variant block mb-1" for="num_doc">Número de Documento</label>
+<input class="form-input font-body-md text-body-md text-on-surface" id="num_doc" name="num_doc" required="" type="text"/>
+</div>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface-variant block mb-1" for="domicilio">Domicilio</label>
+<input class="form-input font-body-md text-body-md text-on-surface" id="domicilio" name="domicilio" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div>
+<label class="font-label-md text-label-md text-on-surface-variant block mb-1" for="telefono">Teléfono / Celular</label>
+<input class="form-input font-body-md text-body-md text-on-surface" id="telefono" name="telefono" required="" type="tel"/>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface-variant block mb-1" for="email">Correo Electrónico</label>
+<input class="form-input font-body-md text-body-md text-on-surface" id="email" name="email" required="" type="email"/>
+</div>
+</div>
+<div class="pt-stack-md">
+<label class="flex items-start gap-3">
+<input class="mt-1 text-primary focus:ring-primary border-outline-variant rounded-sm bg-transparent" name="menor_edad" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant">Soy menor de edad (Si marca esta opción, complete los datos del apoderado).</span>
+</label>
+</div>
+</section>
+<!-- Section 2: Product/Service Details -->
+<section class="space-y-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary border-b border-outline-variant/30 pb-stack-sm">2. Identificación del Bien Contratado</h2>
+<div class="flex gap-gutter">
+<label class="flex items-center gap-2">
+<input class="text-primary focus:ring-primary border-outline-variant bg-transparent" name="tipo_bien" required="" type="radio" value="producto"/>
+<span class="font-body-md text-body-md text-on-surface">Producto</span>
+</label>
+<label class="flex items-center gap-2">
+<input class="text-primary focus:ring-primary border-outline-variant bg-transparent" name="tipo_bien" type="radio" value="servicio"/>
+<span class="font-body-md text-body-md text-on-surface">Servicio</span>
+</label>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface-variant block mb-1" for="monto">Monto Reclamado (S/)</label>
+<input class="form-input font-body-md text-body-md text-on-surface" id="monto" name="monto" placeholder="0.00" step="0.01" type="number"/>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface-variant block mb-1" for="descripcion_bien">Descripción (Nombre del producto, código de pedido, etc.)</label>
+<input class="form-input font-body-md text-body-md text-on-surface" id="descripcion_bien" name="descripcion_bien" required="" type="text"/>
+</div>
+</section>
+<!-- Section 3: Complaint Details -->
+<section class="space-y-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary border-b border-outline-variant/30 pb-stack-sm">3. Detalle de la Reclamación y Pedido del Consumidor</h2>
+<div class="flex gap-gutter">
+<label class="flex items-center gap-2">
+<input class="text-primary focus:ring-primary border-outline-variant bg-transparent" name="tipo_reclamo" required="" type="radio" value="reclamo"/>
+<span class="font-body-md text-body-md text-on-surface">Reclamo</span>
+</label>
+<label class="flex items-center gap-2">
+<input class="text-primary focus:ring-primary border-outline-variant bg-transparent" name="tipo_reclamo" type="radio" value="queja"/>
+<span class="font-body-md text-body-md text-on-surface">Queja</span>
+</label>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface-variant block mb-2" for="detalle">Detalle</label>
+<textarea class="form-textarea font-body-md text-body-md text-on-surface" id="detalle" name="detalle" placeholder="Escriba aquí los detalles del suceso..." required="" rows="4"></textarea>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface-variant block mb-2" for="pedido">Pedido</label>
+<textarea class="form-textarea font-body-md text-body-md text-on-surface" id="pedido" name="pedido" placeholder="¿Qué solución espera?" required="" rows="3"></textarea>
+</div>
+</section>
+<div class="pt-stack-lg flex flex-col items-end gap-stack-md">
+<p class="font-label-sm text-label-sm text-on-surface-variant text-right max-w-lg">
+                            * La formulación del reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo para interponer una denuncia ante el INDECOPI.
+                            <br/>
+                            * El proveedor deberá dar respuesta al reclamo en un plazo no mayor a treinta (30) días calendario.
+                        </p>
+<button class="bg-ink-black text-on-primary font-label-md text-label-md uppercase px-8 py-3 rounded hover:bg-primary transition-colors duration-300" type="submit">
+                            Enviar Reclamo
+                        </button>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-on-tertiary-fixed w-full py-section-gap bg-blush-silk dark:bg-on-tertiary-fixed-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg max-w-[1440px] mx-auto px-margin-desktop max-md:px-margin-mobile">
+<div class="font-headline-md text-headline-md max-md:font-headline-lg-mobile max-md:text-headline-lg-mobile text-primary">
+                Aelia Boutique
+            </div>
+<div class="col-span-1 md:col-span-3 flex flex-wrap gap-gutter font-label-md text-label-md font-body-md text-body-md items-center md:justify-end">
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:text-primary transition-colors" href="#">Order Tracking</a>
+<a class="text-primary font-bold hover:text-primary transition-colors Active: scale-[0.99] transition-transform" href="#">Complaints Book</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a>
+</div>
+</div>
+<div class="text-center mt-stack-lg font-body-md text-body-md text-on-surface-variant px-margin-desktop max-md:px-margin-mobile">
+            © 2024 Aelia Boutique. All rights reserved.
+        </div>
+</footer>
+</body></html>

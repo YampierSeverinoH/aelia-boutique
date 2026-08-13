@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tienda | Aelia Boutique</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Libre+Caslon+Text:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#00210e",
+                        "on-primary-fixed-variant": "#673a42",
+                        "primary": "#825159",
+                        "on-background": "#1f1a1b",
+                        "on-tertiary-fixed-variant": "#2a4e35",
+                        "outline-variant": "#d5c2c4",
+                        "surface-tint": "#825159",
+                        "surface-container": "#f6ebec",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1f1a1b",
+                        "ink-black": "#1A1A1A",
+                        "surface-bright": "#fff8f7",
+                        "on-secondary-fixed": "#261900",
+                        "background": "#fff8f7",
+                        "on-primary-fixed": "#330f17",
+                        "primary-container": "#e5a8b1",
+                        "inverse-surface": "#352f2f",
+                        "on-tertiary-container": "#2c5037",
+                        "tertiary-fixed": "#c3edcb",
+                        "tertiary-container": "#9ac2a2",
+                        "secondary-fixed-dim": "#e9c176",
+                        "surface-dim": "#e2d8d8",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "outline": "#837375",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#f5b6bf",
+                        "on-secondary-container": "#785a1a",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#fcf1f1",
+                        "secondary-fixed": "#ffdea5",
+                        "primary-fixed-dim": "#f5b6bf",
+                        "on-surface-variant": "#514345",
+                        "soft-gray": "#F5F5F5",
+                        "surface-variant": "#ebe0e0",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fed488",
+                        "inverse-on-surface": "#f9eeee",
+                        "on-error-container": "#93000a",
+                        "antique-gold": "#B38B4D",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#a8d0b0",
+                        "tertiary": "#42664c",
+                        "blush-silk": "#FDF3F4",
+                        "surface": "#fff8f7",
+                        "surface-container-highest": "#ebe0e0",
+                        "on-primary-container": "#693b43",
+                        "primary-fixed": "#ffd9de",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#f0e6e6",
+                        "secondary": "#775a19"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "20px",
+                        "stack-md": "16px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "body-md": ["Hanken Grotesk"],
+                        "title-lg": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "headline-md": ["Libre Caslon Text"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.surface');
+            color: theme('colors.on-surface');
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Custom scrollbar for an elegant feel */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: theme('colors.outline-variant');
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.outline');
+        }
+
+        .product-image-container:hover .quick-add-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .quick-add-overlay {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .product-card {
+            transition: transform 0.3s ease;
+        }
+        
+        /* Subtle image zoom on hover */
+        .product-card:hover .product-img {
+            transform: scale(1.03);
+        }
+        .product-img {
+            transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="w-full sticky top-0 z-50 border-b border-outline-variant/30 bg-surface/80 backdrop-blur-md bg-surface dark:bg-on-tertiary-fixed font-headline-md text-headline-md font-label-md text-label-md">
+<div class="flex justify-between items-center max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-stack-md">
+<!-- Mobile Menu Icon (Placeholder for functionality) -->
+<button class="md:hidden text-primary hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Brand Logo -->
+<a class="font-headline-lg text-headline-lg tracking-widest text-primary dark:text-primary-fixed-dim hover:opacity-70 transition-opacity" href="#">
+                Aelia Boutique
+            </a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-primary border-b border-primary pb-1 font-label-md text-label-md transition-colors duration-300" href="#">Shop</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#">Contact</a>
+</nav>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-stack-md text-primary dark:text-primary-fixed-dim">
+<button aria-label="Search" class="hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button aria-label="User Account" class="hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button aria-label="Shopping Bag" class="hover:opacity-70 transition-opacity relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<!-- Cart Badge -->
+<span class="absolute -top-1 -right-1 bg-antique-gold text-white font-label-sm text-[10px] w-4 h-4 rounded-full flex items-center justify-center">2</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Layout -->
+<section class="w-full overflow-hidden">
+<div class="max-w-[1440px] mx-auto">
+<img alt="Luxury fashion editorial banner" class="w-full h-auto aspect-[21/9] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW9-Bg38JPC1DjTZao6xSd0pTs3ddktcmUdOSeEi-5CI3i5OHXjYrABDy_nB2Ruv-1Yp5VqNDeS4UtQFYH7ZVLKe0QeYYOB1UpaYDdDWjWNHNYgQdV5414HT3nKTe0mv3E2In8rXG4DeiAd-zw-z_Ium5ApsY7d7MSUFHsY38c45D4CbkF84aaev1STwtLoDSE68WGWh-BgoJvzTzjQ4BvhXjObumHPfnyDu30ikQQ-hvoNNwASZP4"/>
+</div>
+</section><main class="flex-grow max-w-[1440px] mx-auto w-full px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row gap-margin-desktop pb-section-gap">
+<!-- Sidebar Filters (Desktop) -->
+<aside class="hidden md:block w-64 flex-shrink-0">
+<div class="sticky top-32">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-lg border-b border-outline-variant/30 pb-stack-sm">Filtros</h2>
+<!-- Category Filter -->
+<div class="mb-stack-lg">
+<h3 class="font-title-lg text-title-lg text-on-surface-variant mb-stack-md">Categoría</h3>
+<ul class="space-y-stack-sm font-body-md text-body-md text-on-surface-variant">
+<li>
+<label class="flex items-center gap-2 cursor-pointer hover:text-primary transition-colors">
+<input checked="" class="form-checkbox rounded text-primary focus:ring-primary bg-transparent border-outline-variant h-4 w-4" type="checkbox"/>
+<span>Vestidos</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-2 cursor-pointer hover:text-primary transition-colors">
+<input class="form-checkbox rounded text-primary focus:ring-primary bg-transparent border-outline-variant h-4 w-4" type="checkbox"/>
+<span>Blusas</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-2 cursor-pointer hover:text-primary transition-colors">
+<input class="form-checkbox rounded text-primary focus:ring-primary bg-transparent border-outline-variant h-4 w-4" type="checkbox"/>
+<span>Pantalones</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-2 cursor-pointer hover:text-primary transition-colors">
+<input class="form-checkbox rounded text-primary focus:ring-primary bg-transparent border-outline-variant h-4 w-4" type="checkbox"/>
+<span>Accesorios</span>
+</label>
+</li>
+</ul>
+</div>
+<!-- Size Filter -->
+<div class="mb-stack-lg">
+<h3 class="font-title-lg text-title-lg text-on-surface-variant mb-stack-md">Talla</h3>
+<div class="flex flex-wrap gap-2">
+<button class="w-10 h-10 border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary transition-colors font-label-md">XS</button>
+<button class="w-10 h-10 border border-primary bg-primary/5 text-primary transition-colors font-label-md">S</button>
+<button class="w-10 h-10 border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary transition-colors font-label-md">M</button>
+<button class="w-10 h-10 border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary transition-colors font-label-md">L</button>
+<button class="w-10 h-10 border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary transition-colors font-label-md">XL</button>
+</div>
+</div>
+<!-- Color Filter -->
+<div class="mb-stack-lg">
+<h3 class="font-title-lg text-title-lg text-on-surface-variant mb-stack-md">Color</h3>
+<div class="flex flex-wrap gap-3">
+<button aria-label="Negro" class="w-6 h-6 rounded-full bg-ink-black border border-outline-variant/30 ring-2 ring-transparent hover:ring-outline-variant transition-all"></button>
+<button aria-label="Blanco" class="w-6 h-6 rounded-full bg-surface-container-lowest border border-outline-variant/50 ring-2 ring-primary transition-all"></button>
+<button aria-label="Rosa" class="w-6 h-6 rounded-full bg-primary border border-outline-variant/30 ring-2 ring-transparent hover:ring-outline-variant transition-all"></button>
+<button aria-label="Dorado" class="w-6 h-6 rounded-full bg-antique-gold border border-outline-variant/30 ring-2 ring-transparent hover:ring-outline-variant transition-all"></button>
+<button aria-label="Beige" class="w-6 h-6 rounded-full bg-[#E5E0D8] border border-outline-variant/30 ring-2 ring-transparent hover:ring-outline-variant transition-all"></button>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid Area -->
+<div class="flex-grow">
+<!-- Header & Sort -->
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-stack-lg gap-stack-md">
+<h1 class="font-display-lg text-display-lg text-on-surface font-headline-lg-mobile">Colección</h1>
+<div class="flex items-center gap-stack-sm">
+<span class="text-on-surface-variant font-label-md">Ordenar por:</span>
+<select class="bg-transparent border-b border-outline-variant text-on-surface font-body-md py-1 pr-8 focus:ring-0 focus:border-primary">
+<option>Novedades</option>
+<option>Precio: Menor a Mayor</option>
+<option>Precio: Mayor a Menor</option>
+<option>Más Populares</option>
+</select>
+</div>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-gutter gap-y-stack-lg">
+<!-- Product 1 -->
+<article class="product-card group cursor-pointer">
+<div class="product-image-container relative aspect-[3/4] overflow-hidden mb-stack-sm bg-surface-container">
+<img class="product-img object-cover w-full h-full" data-alt="A sophisticated editorial shot of a woman wearing a flowing silk slip dress in a soft blush pink hue. The setting is a minimalist, airy studio with bright, natural high-key lighting casting gentle, diffused shadows. The model poses elegantly against a pristine white backdrop. The overall aesthetic is premium, feminine, and luxury fashion." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAApzi-Nr4-JznN9HAQ5S_UArak7F8eII0Bin-vgj70HcpqNwSRFUBrWkT33Qvio02w-U58VLCvvfTl-t2CLsQaboaWYIGKh2L2C_ng8RA-ePgph6_qbfdiw6tVMW6ixuhu_-UHfF5JyGcvC2UqIF9PDg71KJpnK3l5DuR5spiYv8xGVLpohjQQnsqVCq1INqHQKZC9sR28fD57-__uaIGdRzukmNC_YxrKpYDBDdnxK9EzdBW1HD-4"/>
+<!-- Chip -->
+<div class="absolute top-3 left-3 bg-antique-gold text-white px-2 py-1 font-label-sm uppercase tracking-widest">
+                            Nuevo
+                        </div>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute bottom-0 left-0 w-full p-stack-sm bg-gradient-to-t from-black/20 to-transparent">
+<button class="w-full bg-ink-black text-white font-label-md py-3 hover:bg-primary transition-colors duration-300 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                Vista Rápida
+                            </button>
+</div>
+</div>
+<div class="text-center">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-1 group-hover:text-primary transition-colors">Vestido Seda Blush</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">€ 245.00</p>
+</div>
+</article>
+<!-- Product 2 -->
+<article class="product-card group cursor-pointer">
+<div class="product-image-container relative aspect-[3/4] overflow-hidden mb-stack-sm bg-surface-container">
+<img class="product-img object-cover w-full h-full" data-alt="A high-end fashion photography image showcasing a crisp white linen blazer paired with tailored trousers. The model is standing in a brightly lit, minimalist architectural space with subtle warm undertones. The lighting highlights the texture of the linen fabric. The mood is modern, professional, yet effortlessly chic and luxurious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrnwMiQhCnMe4RwxsD_ET8ucVvTpqNT8t0tUrf000ynSTeTVj79ZKlFq-zh_zm9uvMeXO31fTOfble6Yb-z9g5SKWQRanw-XBYqzuc9JfsxOHPP5QEDTYdw2_Q_NLTIsN7SB6GyaFncjge585rmww9Saf43aqLzJ-2xK0yzg-Oa1BIBghl8OgQ-JF6cEzlhTB-p_Q3gNbnDsQZhKAg35fHKyUkGfSfkz8Z7DLB2bKV11Wi4-T6Ax8W"/>
+<div class="quick-add-overlay absolute bottom-0 left-0 w-full p-stack-sm bg-gradient-to-t from-black/20 to-transparent">
+<button class="w-full bg-ink-black text-white font-label-md py-3 hover:bg-primary transition-colors duration-300 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                Vista Rápida
+                            </button>
+</div>
+</div>
+<div class="text-center">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-1 group-hover:text-primary transition-colors">Blazer Lino Blanco</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">€ 320.00</p>
+</div>
+</article>
+<!-- Product 3 -->
+<article class="product-card group cursor-pointer">
+<div class="product-image-container relative aspect-[3/4] overflow-hidden mb-stack-sm bg-surface-container">
+<img class="product-img object-cover w-full h-full" data-alt="A detailed close-up shot of a delicate gold chain necklace with a small, elegant pearl pendant resting on a soft, textured cream fabric. The lighting is soft and warm, creating a luxurious and intimate atmosphere. The focus is sharp on the jewelry, emphasizing premium craftsmanship in a minimalist context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5eFY0Xlo7_cxt3CY2EZ4h7UWFb95oDdBCEzYNwCEUZG4Qkkxcv_iDRHcBI1L1oP7p1thwXlUaOSSoKV7fa9Ie0sKHTDcmqCZBj9c_4sINGlogpSFEnFOgkaDZxjTPWzuqalPAu8C4bMfiJuJs2DwtkY7N5YkL-Z79U08delhl1Eg_ywh1XescePZHdUu75hMelcE1Zi2WIUw8zsLUzf8bh1u9n0uCDaWoZlXIVxFvuT7UsDw04p2n"/>
+<div class="absolute top-3 left-3 bg-primary text-white px-2 py-1 font-label-sm uppercase tracking-widest">
+                            Vendido
+                        </div>
+</div>
+<div class="text-center opacity-60">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-1">Collar Perla Clásica</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Agotado</p>
+</div>
+</article>
+<!-- More products can be added here following the same structure -->
+</div>
+<!-- Load More -->
+<div class="mt-section-gap flex justify-center">
+<button class="border border-antique-gold bg-transparent text-on-surface hover:bg-surface-container-high transition-colors px-8 py-3 font-label-md uppercase tracking-widest">
+                    Cargar Más
+                </button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface-container dark:bg-on-tertiary-fixed text-primary dark:text-primary-fixed-dim font-label-md text-label-md font-body-md text-body-md bg-blush-silk dark:bg-on-tertiary-fixed-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="col-span-1 md:col-span-2">
+<div class="font-headline-md text-headline-md text-primary mb-stack-md">Aelia Boutique</div>
+<p class="text-on-surface-variant max-w-sm mb-stack-lg font-body-md">Descubre la elegancia y la gracia en cada prenda. Una selección curada para la mujer moderna.</p>
+<div class="text-on-surface-variant font-label-md text-label-md">
+                    © 2024 Aelia Boutique. All rights reserved.
+                </div>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-primary mb-stack-md">Atención al Cliente</h4>
+<ul class="space-y-stack-sm flex flex-col items-start">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#">Order Tracking</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#">Complaints Book</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#">Shipping &amp; Returns</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-primary mb-stack-md">Legal</h4>
+<ul class="space-y-stack-sm flex flex-col items-start">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#">Términos de Servicio</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>

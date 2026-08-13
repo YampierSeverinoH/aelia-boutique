@@ -1,0 +1,401 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Aelia Boutique - Detalle de Producto</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Libre+Caslon+Text:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#ffdea5",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "secondary-container": "#fed488",
+                        "secondary-fixed-dim": "#e9c176",
+                        "antique-gold": "#B38B4D",
+                        "on-surface": "#1f1a1b",
+                        "surface-variant": "#ebe0e0",
+                        "primary": "#825159",
+                        "primary-fixed-dim": "#f5b6bf",
+                        "blush-silk": "#FDF3F4",
+                        "secondary": "#775a19",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#00210e",
+                        "on-tertiary-fixed-variant": "#2a4e35",
+                        "on-primary-container": "#693b43",
+                        "on-surface-variant": "#514345",
+                        "on-secondary-fixed": "#261900",
+                        "ink-black": "#1A1A1A",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#fcf1f1",
+                        "tertiary": "#42664c",
+                        "surface-tint": "#825159",
+                        "inverse-on-surface": "#f9eeee",
+                        "inverse-primary": "#f5b6bf",
+                        "surface-container-high": "#f0e6e6",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#e5a8b1",
+                        "surface-container": "#f6ebec",
+                        "on-primary-fixed-variant": "#673a42",
+                        "outline": "#837375",
+                        "tertiary-fixed-dim": "#a8d0b0",
+                        "surface-bright": "#fff8f7",
+                        "surface-dim": "#e2d8d8",
+                        "background": "#fff8f7",
+                        "tertiary-container": "#9ac2a2",
+                        "on-tertiary-container": "#2c5037",
+                        "on-error-container": "#93000a",
+                        "surface": "#fff8f7",
+                        "on-primary-fixed": "#330f17",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#352f2f",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#ebe0e0",
+                        "tertiary-fixed": "#c3edcb",
+                        "on-background": "#1f1a1b",
+                        "on-secondary-container": "#785a1a",
+                        "outline-variant": "#d5c2c4",
+                        "soft-gray": "#F5F5F5",
+                        "primary-fixed": "#ffd9de"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "stack-md": "16px",
+                        "section-gap": "120px",
+                        "stack-lg": "32px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "title-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "headline-md": ["Libre Caslon Text"],
+                        "label-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "fontWeight": "400" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col relative">
+<!-- Toast Notification -->
+<div class="fixed top-24 right-margin-mobile md:right-margin-desktop bg-ink-black text-white px-6 py-4 rounded shadow-2xl z-50 flex items-center space-x-4 transform translate-x-full opacity-0 transition-all duration-300" id="toast">
+<span class="material-symbols-outlined fill text-antique-gold">check_circle</span>
+<div>
+<p class="font-label-md text-label-md">Añadido al carrito</p>
+<p class="font-label-sm text-label-sm text-outline-variant">Blusa de Seda - Talla M</p>
+</div>
+<button class="ml-auto text-outline-variant hover:text-white transition-colors" onclick="document.getElementById('toast').classList.add('translate-x-full', 'opacity-0')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-ink-black text-primary dark:text-primary-fixed-dim sticky full-width top-0 z-40 border-b border-outline-variant dark:border-outline/20 flat no shadows">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto hidden md:flex">
+<!-- Brand -->
+<a class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed-dim tracking-tight" href="#">
+                Aelia Boutique
+            </a>
+<!-- Links -->
+<div class="flex space-x-8 items-center text-label-md font-label-md">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors dark:hover:text-primary-fixed-dim transition-all duration-300" href="#">Pantalones</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors dark:hover:text-primary-fixed-dim transition-all duration-300" href="#">Polos</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors dark:hover:text-primary-fixed-dim transition-all duration-300" href="#">Camisas</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary pb-1" href="#">Blusas</a>
+</div>
+<!-- Icons -->
+<div class="flex space-x-6 items-center">
+<button class="text-on-surface-variant hover:text-primary transition-colors" data-icon="search">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors" data-icon="person">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors relative" data-icon="shopping_bag">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">2</span>
+</button>
+</div>
+</div>
+<!-- Mobile Nav Header -->
+<div class="flex md:hidden justify-between items-center px-margin-mobile py-4 w-full">
+<button class="text-on-surface-variant">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<a class="text-headline-md font-headline-md font-bold text-primary tracking-tight" href="#">
+                Aelia Boutique
+            </a>
+<button class="text-on-surface-variant relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg md:py-margin-desktop">
+<!-- Breadcrumb -->
+<nav class="mb-stack-lg text-label-sm font-label-sm text-outline flex items-center space-x-2">
+<a class="hover:text-primary transition-colors" href="#">INICIO</a>
+<span class="">/</span>
+<a class="hover:text-primary transition-colors" href="#">ROPA DE DAMA</a>
+<span class="">/</span>
+<a class="hover:text-primary transition-colors" href="#">BLUSAS</a>
+<span class="">/</span>
+<span class="text-on-surface">BLUSA DE SEDA ELEGANTE</span>
+</nav>
+<!-- Product Detail Layout (Bento-style Grid) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-12">
+<!-- Left: Image Gallery -->
+<div class="lg:col-span-7 flex flex-col-reverse md:flex-row gap-4 h-[600px] lg:h-[800px]">
+<!-- Thumbnails (Vertical on desktop, horizontal on mobile) -->
+<div class="flex md:flex-col gap-4 overflow-x-auto md:overflow-y-auto hide-scroll md:w-24 shrink-0">
+<button class="w-20 h-24 md:w-full md:h-32 border border-primary relative overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A beautiful young woman modeling a delicate, blush-pink silk blouse in a brightly lit, minimalist white studio. Soft natural light highlights the subtle sheen of the fabric. The aesthetic is high-end fashion editorial, clean, and elegant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKDe58qF3jWOyruKUr8zRy3E6fKXLDWWqrKYv9woxAnC3vZUQD1XLXhsHilr1-n_GD3R4RI4ISWITaiWCSGbXOA6QDCG8KiXicngoG2gSVAI-hS8050Nw3YVnDOYdW6rZtijgQtPx1bV6Y0o8EJalAzhUUlGbeolgAMmTPubQwHQ1un5Z_mGbixthSJgPcKWkcep3JzMAmglGrzhwrCq9eC7XGIsEKT8w7E2CKarPcQbMLylFKxqPf">
+</button>
+<button class="w-20 h-24 md:w-full md:h-32 opacity-70 hover:opacity-100 transition-opacity border border-transparent relative overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up detail shot of a delicate, blush-pink silk blouse collar and buttons. High-key lighting, minimalist white studio background. The fabric has a soft sheen and looks incredibly luxurious and soft. Editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCacWuwKGjp2Ru6XVDfogxP3t_4_tgKiq8zbCJzXYoqj_xvDTHkCYiVO_qXigVlex6Wj3A3ih3ALdfpDG4c8ailGdxiGZmvnvwpXhEJcdcvC9e3Axi0jrSzID00v04xnAqDemfO7Jlw6R2y45-99rqNcD-WSsz23I7EuqUxeJyz1zufnDVihNmyttxrzA-Sj5ctbcm6u01y6V44BA98vnaGCCdlan-KJg_wLLjydv6fKpgTihJMnqYc">
+</button>
+<button class="w-20 h-24 md:w-full md:h-32 opacity-70 hover:opacity-100 transition-opacity border border-transparent relative overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A beautiful young woman modeling a delicate, blush-pink silk blouse from the back, showing a subtle bow detail at the nape of the neck. Brightly lit, minimalist white studio setting. High-end fashion aesthetic, elegant and clean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_ToG3STbMmPUzbgvVLwadMJNjFUVU0-17ta959qLpfOkEEWd7e2CuHL4fKS1XWUmGHJ-OX3O68pvvkJoR03APw3W62rqDHz0QWBmK-LCMJtSFGx00Dt92SXYe0i8bLPfggWIh_RCOeOdTPidHr8IaALTL_lbENewHQzL3q_Posj4L8Z8TNjA5h9G6SSY8yK51ZENRp_PU2K5f2foeiSTCAjKBHwjqqKNf_4ee4be68orNvRq_T6Pn">
+</button>
+<!-- Video Thumbnail -->
+<button class="w-20 h-24 md:w-full md:h-32 opacity-70 hover:opacity-100 transition-opacity border border-transparent relative overflow-hidden group bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">play_circle</span>
+</button>
+</div>
+<!-- Main Image Area -->
+<div class="flex-grow relative bg-surface-bright overflow-hidden group cursor-zoom-in">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" data-alt="A beautiful young woman modeling a delicate, blush-pink silk blouse in a brightly lit, minimalist white studio. Soft natural light highlights the subtle sheen of the fabric. Full body shot, the blouse is paired with tailored white trousers. The aesthetic is high-end fashion editorial, clean, elegant, and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhQgKcbWFlOtDQB_GlAsstmbWqYBeNm-QsvK-giG05X12c_ZA-qzfp8Kvxt4UqAtnWASMy2bR2HAckBIEgEUX7tMufX-qgPsVsPWYjKDu8ll0VNg8J3sszgN0usmrDFZjq8SFswPqcVPsiU1vbJBJRKM-f0lhBY02oXijUKWt8XWcn7IIe8Tz5jLln3VIExez4vUKOfuBWqkufUdwEhmYGB5QbOEbOB-nBIYhWQScj0f-4f9zocqOb">
+<!-- Chips -->
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-primary text-white font-label-sm text-label-sm px-3 py-1 rounded">NUEVO</span>
+<span class="bg-antique-gold text-white font-label-sm text-label-sm px-3 py-1 rounded">EXCLUSIVO</span>
+</div>
+<!-- Immersive View Hint -->
+<div class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<span class="material-symbols-outlined text-on-surface">zoom_in</span>
+</div>
+</div>
+</div>
+<!-- Right: Product Info -->
+<div class="lg:col-span-5 flex flex-col h-full lg:pl-4">
+<!-- Title & Price -->
+<div class="mb-stack-lg">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2 tracking-tight">Blusa de Seda Elegante</h1>
+<!-- Reviews -->
+<div class="flex items-center space-x-2 mb-4">
+<div class="flex text-antique-gold">
+<span class="material-symbols-outlined fill text-sm">star</span>
+<span class="material-symbols-outlined fill text-sm">star</span>
+<span class="material-symbols-outlined fill text-sm">star</span>
+<span class="material-symbols-outlined fill text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star_half</span>
+</div>
+<span class="text-label-sm font-label-sm text-outline-variant underline cursor-pointer hover:text-primary transition-colors">4.8 (24 Reseñas)</span>
+</div>
+<div class="flex items-end space-x-4">
+<span class="font-headline-md text-headline-md text-on-surface">S/ 249.00</span>
+<span class="text-body-md font-body-md text-outline-variant line-through mb-1">S/ 299.00</span>
+</div>
+</div>
+<!-- Short Description -->
+<p class="text-body-md font-body-md text-on-surface-variant mb-stack-lg leading-relaxed">
+                    Confeccionada con la más fina seda, esta blusa presenta una caída suave y un brillo sutil. Su diseño minimalista con cuello mao y botones ocultos la convierte en la pieza perfecta tanto para la oficina como para una cena elegante.
+                </p>
+<!-- Color Selection -->
+<div class="mb-stack-lg">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-md text-label-md text-on-surface uppercase">Color: <span class="font-normal text-outline">Rosa Rubor</span></span>
+</div>
+<div class="flex space-x-3">
+<button class="w-8 h-8 rounded-full bg-blush-silk border border-primary ring-2 ring-white ring-offset-1"></button>
+<button class="w-8 h-8 rounded-full bg-[#E5E5E5] border border-outline-variant hover:border-outline transition-colors"></button>
+<button class="w-8 h-8 rounded-full bg-ink-black border border-outline-variant hover:border-outline transition-colors"></button>
+</div>
+</div>
+<!-- Size Selection -->
+<div class="mb-stack-lg">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-md text-label-md text-on-surface uppercase">Talla: <span class="font-normal text-outline">M</span></span>
+<a class="font-label-sm text-label-sm text-outline underline hover:text-primary transition-colors" href="#">Guía de tallas</a>
+</div>
+<div class="grid grid-cols-4 gap-3">
+<button class="border border-outline-variant text-on-surface-variant py-2 hover:border-primary hover:text-primary transition-colors font-label-md text-label-md">XS</button>
+<button class="border border-outline-variant text-on-surface-variant py-2 hover:border-primary hover:text-primary transition-colors font-label-md text-label-md">S</button>
+<button class="border border-primary bg-primary-container/10 text-primary py-2 font-label-md text-label-md">M</button>
+<button class="border border-outline-variant text-on-surface-variant py-2 hover:border-primary hover:text-primary transition-colors font-label-md text-label-md">L</button>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-4 mt-auto">
+<button class="w-full bg-primary hover:bg-primary-container text-white py-4 font-label-md text-label-md transition-colors duration-300 flex justify-center items-center space-x-2" onclick="document.getElementById('toast').classList.remove('translate-x-full', 'opacity-0'); setTimeout(() =&gt; document.getElementById('toast').classList.add('translate-x-full', 'opacity-0'), 3000);">
+<span class="">AÑADIR AL CARRITO</span>
+<span class="material-symbols-outlined text-sm">shopping_bag</span>
+</button>
+<button class="w-full border border-antique-gold text-secondary py-4 font-label-md text-label-md hover:bg-secondary-fixed/20 transition-colors duration-300 flex justify-center items-center space-x-2">
+<span class="">COMPRAR AHORA</span>
+</button>
+</div>
+<!-- Additional Info (Shipping, etc) -->
+<div class="mt-6 border-t border-outline-variant/30 pt-6 grid grid-cols-2 gap-4">
+<div class="flex items-start space-x-3">
+<span class="material-symbols-outlined text-outline">local_shipping</span>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface uppercase">Envío Gratis</p>
+<p class="font-label-sm text-[10px] text-outline-variant">En pedidos mayores a S/ 300</p>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="material-symbols-outlined text-outline">keyboard_return</span>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface uppercase">Devoluciones</p>
+<p class="font-label-sm text-[10px] text-outline-variant">Hasta 30 días</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- E-commerce Tabs Section -->
+<div class="mt-section-gap">
+<div class="border-b border-outline-variant/30 flex space-x-8">
+<button class="pb-4 font-label-md text-label-md text-primary border-b-2 border-primary uppercase tracking-wide">Descripción Técnica</button>
+<button class="pb-4 font-label-md text-label-md text-outline-variant hover:text-primary transition-colors uppercase tracking-wide">Materiales y Cuidado</button>
+<button class="pb-4 font-label-md text-label-md text-outline-variant hover:text-primary transition-colors uppercase tracking-wide">Reseñas (24)</button>
+</div>
+<div class="py-stack-lg max-w-3xl">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    Diseñada meticulosamente en nuestros talleres, esta blusa destaca por sus acabados a mano. Presenta costuras francesas para un interior limpio y mayor durabilidad. El corte holgado permite libertad de movimiento manteniendo una silueta estructurada. Ideal para combinar con faldas lápiz o pantalones de sastrería para un look impecable.
+                </p>
+<ul class="list-disc list-inside mt-4 text-on-surface-variant font-body-md space-y-2">
+<li class="">Cuello mao con cierre de botón en la nuca.</li>
+<li class="">Puños anchos con doble botonadura.</li>
+<li class="">Dobladillo ligeramente asimétrico (más largo en la espalda).</li>
+<li class="">Hecho en Perú.</li>
+</ul>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<section class="mt-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap">
+  <h2 class="font-headline-md text-headline-md text-on-surface mb-stack-lg tracking-tight">Productos Similares</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+    <!-- Product Card 1 -->
+    <div class="group cursor-pointer">
+      <div class="relative aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_ToG3STbMmPUzbgvVLwadMJNjFUVU0-17ta959qLpfOkEEWd7e2CuHL4fKS1XWUmGHJ-OX3O68pvvkJoR03APw3W62rqDHz0QWBmK-LCMJtSFGx00Dt92SXYe0i8bLPfggWIh_RCOeOdTPidHr8IaALTL_lbENewHQzL3q_Posj4L8Z8TNjA5h9G6SSY8yK51ZENRp_PU2K5f2foeiSTCAjKBHwjqqKNf_4ee4be68orNvRq_T6Pn" alt="Pantalón Palazzo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        <div class="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+          <button class="w-full bg-white/90 backdrop-blur-sm text-on-surface py-2 font-label-sm text-label-sm hover:bg-primary hover:text-white transition-colors">VISTA RÁPIDA</button>
+        </div>
+      </div>
+      <h3 class="font-label-md text-label-md text-on-surface mb-1">Pantalón Palazzo</h3>
+      <p class="font-body-md text-body-md text-primary">S/ 189.00</p>
+    </div>
+    <!-- Product Card 2 -->
+    <div class="group cursor-pointer">
+      <div class="relative aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCacWuwKGjp2Ru6XVDfogxP3t_4_tgKiq8zbCJzXYoqj_xvDTHkCYiVO_qXigVlex6Wj3A3ih3ALdfpDG4c8ailGdxiGZmvnvwpXhEJcdcvC9e3Axi0jrSzID00v04xnAqDemfO7Jlw6R2y45-99rqNcD-WSsz23I7EuqUxeJyz1zufnDVihNmyttxrzA-Sj5ctbcm6u01y6V44BA98vnaGCCdlan-KJg_wLLjydv6fKpgTihJMnqYc" alt="Camisa Blanca de Lino" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        <div class="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+          <button class="w-full bg-white/90 backdrop-blur-sm text-on-surface py-2 font-label-sm text-label-sm hover:bg-primary hover:text-white transition-colors">VISTA RÁPIDA</button>
+        </div>
+      </div>
+      <h3 class="font-label-md text-label-md text-on-surface mb-1">Camisa Blanca de Lino</h3>
+      <p class="font-body-md text-body-md text-primary">S/ 159.00</p>
+    </div>
+    <!-- Product Card 3 -->
+    <div class="group cursor-pointer">
+      <div class="relative aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKDe58qF3jWOyruKUr8zRy3E6fKXLDWWqrKYv9woxAnC3vZUQD1XLXhsHilr1-n_GD3R4RI4ISWITaiWCSGbXOA6QDCG8KiXicngoG2gSVAI-hS8050Nw3YVnDOYdW6rZtijgQtPx1bV6Y0o8EJalAzhUUlGbeolgAMmTPubQwHQ1un5Z_mGbixthSJgPcKWkcep3JzMAmglGrzhwrCq9eC7XGIsEKT8w7E2CKarPcQbMLylFKxqPf" alt="Falda Midi Satinada" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        <div class="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+          <button class="w-full bg-white/90 backdrop-blur-sm text-on-surface py-2 font-label-sm text-label-sm hover:bg-primary hover:text-white transition-colors">VISTA RÁPIDA</button>
+        </div>
+      </div>
+      <h3 class="font-label-md text-label-md text-on-surface mb-1">Falda Midi Satinada</h3>
+      <p class="font-body-md text-body-md text-primary">S/ 145.00</p>
+    </div>
+    <!-- Product Card 4 -->
+    <div class="group cursor-pointer">
+      <div class="relative aspect-[3/4] overflow-hidden bg-surface-variant mb-4">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhQgKcbWFlOtDQB_GlAsstmbWqYBeNm-QsvK-giG05X12c_ZA-qzfp8Kvxt4UqAtnWASMy2bR2HAckBIEgEUX7tMufX-qgPsVsPWYjKDu8ll0VNg8J3sszgN0usmrDFZjq8SFswPqcVPsiU1vbJBJRKM-f0lhBY02oXijUKWt8XWcn7IIe8Tz5jLln3VIExez4vUKOfuBWqkufUdwEhmYGB5QbOEbOB-nBIYhWQScj0f-4f9zocqOb" alt="Blazer Estructurado" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        <div class="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+          <button class="w-full bg-white/90 backdrop-blur-sm text-on-surface py-2 font-label-sm text-label-sm hover:bg-primary hover:text-white transition-colors">VISTA RÁPIDA</button>
+        </div>
+      </div>
+      <h3 class="font-label-md text-label-md text-on-surface mb-1">Blazer Estructurado</h3>
+      <p class="font-body-md text-body-md text-primary">S/ 329.00</p>
+    </div>
+  </div>
+</section><footer class="bg-blush-silk dark:bg-ink-black text-secondary dark:text-secondary-fixed-dim full-width bottom border-t border-outline-variant dark:border-outline/10 flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<!-- Brand -->
+<div class="flex flex-col space-y-4">
+<a class="text-headline-md font-headline-md text-primary tracking-tight" href="#">Aelia Boutique</a>
+<p class="font-label-sm text-label-sm text-on-surface-variant max-w-xs leading-relaxed">Elevando la moda femenina con piezas exclusivas y atemporales. Descubre tu estilo con nosotros.</p>
+</div>
+<!-- Links -->
+<div class="flex flex-col space-y-4">
+<a class="text-on-surface-variant hover:text-antique-gold transition-colors duration-200 font-label-sm text-label-sm focus:ring-1 focus:ring-primary-container" href="#">Help Center</a>
+<a class="text-on-surface-variant hover:text-antique-gold transition-colors duration-200 font-label-sm text-label-sm focus:ring-1 focus:ring-primary-container" href="#">Terms &amp; Conditions</a>
+<a class="text-on-surface-variant hover:text-antique-gold transition-colors duration-200 font-label-sm text-label-sm focus:ring-1 focus:ring-primary-container" href="#">Libro de Reclamaciones</a>
+</div>
+<!-- Newsletter / Social -->
+<div class="flex flex-col space-y-4">
+<p class="font-title-lg text-title-lg text-primary">Suscríbete</p>
+<div class="flex">
+<input class="bg-transparent border-b border-outline-variant py-2 focus:outline-none focus:border-primary font-body-md text-on-surface w-full" placeholder="Tu correo electrónico" type="email">
+<button class="ml-2 text-primary hover:text-antique-gold transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="text-center py-6 border-t border-outline-variant/20 font-label-sm text-label-sm text-outline-variant">
+            © 2024 Aelia Boutique. All rights reserved.
+        </div>
+</footer>
+
+
+</body></html>

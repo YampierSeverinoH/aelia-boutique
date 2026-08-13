@@ -1,0 +1,392 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Aelia Boutique - Tu Bolsa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Libre+Caslon+Text:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#ffdea5",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "secondary-container": "#fed488",
+                        "secondary-fixed-dim": "#e9c176",
+                        "antique-gold": "#B38B4D",
+                        "on-surface": "#1f1a1b",
+                        "surface-variant": "#ebe0e0",
+                        "primary": "#825159",
+                        "primary-fixed-dim": "#f5b6bf",
+                        "blush-silk": "#FDF3F4",
+                        "secondary": "#775a19",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#00210e",
+                        "on-tertiary-fixed-variant": "#2a4e35",
+                        "on-primary-container": "#693b43",
+                        "on-surface-variant": "#514345",
+                        "on-secondary-fixed": "#261900",
+                        "ink-black": "#1A1A1A",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#fcf1f1",
+                        "tertiary": "#42664c",
+                        "surface-tint": "#825159",
+                        "inverse-on-surface": "#f9eeee",
+                        "inverse-primary": "#f5b6bf",
+                        "surface-container-high": "#f0e6e6",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#e5a8b1",
+                        "surface-container": "#f6ebec",
+                        "on-primary-fixed-variant": "#673a42",
+                        "outline": "#837375",
+                        "tertiary-fixed-dim": "#a8d0b0",
+                        "surface-bright": "#fff8f7",
+                        "surface-dim": "#e2d8d8",
+                        "background": "#fff8f7",
+                        "tertiary-container": "#9ac2a2",
+                        "on-tertiary-container": "#2c5037",
+                        "on-error-container": "#93000a",
+                        "surface": "#fff8f7",
+                        "on-primary-fixed": "#330f17",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#352f2f",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#ebe0e0",
+                        "tertiary-fixed": "#c3edcb",
+                        "on-background": "#1f1a1b",
+                        "on-secondary-container": "#785a1a",
+                        "outline-variant": "#d5c2c4",
+                        "soft-gray": "#F5F5F5",
+                        "primary-fixed": "#ffd9de"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "stack-md": "16px",
+                        "section-gap": "120px",
+                        "stack-lg": "32px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "title-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "headline-md": ["Libre Caslon Text"],
+                        "label-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "fontWeight": "400" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col relative overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-ink-black sticky top-0 w-full z-50 transition-all duration-300 border-b border-outline-variant dark:border-outline/20">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<!-- Brand Logo -->
+<a class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed-dim uppercase tracking-widest" href="#">
+                Aelia Boutique
+            </a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex space-x-8">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors duration-300 text-label-md font-label-md uppercase" href="#">Pantalones</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors duration-300 text-label-md font-label-md uppercase" href="#">Polos</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors duration-300 text-label-md font-label-md uppercase" href="#">Camisas</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors duration-300 text-label-md font-label-md uppercase" href="#">Blusas</a>
+</nav>
+<!-- Trailing Icons -->
+<div class="flex items-center space-x-6">
+<button class="text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300 opacity-80 hover:opacity-100 hover:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300 opacity-80 hover:opacity-100 hover:scale-95 hidden md:block">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person</span>
+</button>
+<button class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary pb-1 transition-all duration-300 opacity-100 relative" id="cart-toggle">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+<span class="absolute -top-1 -right-2 bg-antique-gold text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">2</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas (Checkout Process) -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg md:py-section-gap grid grid-cols-1 lg:grid-cols-12 gap-gutter relative">
+<!-- Background Decorative Element -->
+<div class="absolute inset-0 pointer-events-none opacity-5 z-0" style="background-image: radial-gradient(circle at 50% 0%, #B38B4D 0%, transparent 50%);"></div>
+<!-- Left Column: Checkout Form & Tracking -->
+<div class="lg:col-span-7 z-10 flex flex-col gap-section-gap">
+<!-- Section: Resumen del Carrito (Detailed) -->
+<section class="animate-fade-in-up">
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-ink-black mb-stack-lg border-b border-outline-variant pb-4">Tu Selección</h1>
+<div class="flex flex-col gap-stack-md">
+<!-- Item 1 -->
+<div class="flex gap-stack-md items-start p-4 hover:bg-surface-container-low transition-colors duration-300 group">
+<div class="w-24 h-32 bg-surface-variant rounded flex-shrink-0 overflow-hidden relative">
+<div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="A detailed view of a luxurious, flowing blush pink silk blouse displayed on a pristine white surface. The lighting is soft and high-key, emphasizing the delicate texture and premium quality of the fabric. The overall mood is elegant and feminine, perfectly aligning with a high-end boutique aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuApLBiUGMeje-fHRPcRy-YLoG1ykB4C3rpV0gHqHrtB2hVWsGIfjOOGOP9xerNPVl26AYUzhEqbDVX5UOLi_k58tfX3cugbaQ318yH5HggDhFi0PIcypiFRKkftB0tthXXBhXkHnOSeKz2IeUsSonrMiFgxHjADbgLuzwj9LXc397Psc1I-p6zi-dxE_-JL4edp-pvi34OThFQgjgHQ2xV-KaYrooE9cDHZ5tWv1xlZxpeUuU4S_hJa')"></div>
+</div>
+<div class="flex-grow flex flex-col h-full justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-title-lg font-title-lg text-ink-black">Blusa Seda Rosé</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-1 uppercase tracking-widest">Talla: M | Color: Blush</p>
+</div>
+<button class="text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div class="flex items-center border border-outline-variant rounded-sm h-8">
+<button class="px-2 text-on-surface-variant hover:text-primary transition-colors">-</button>
+<span class="px-2 text-label-md font-label-md">1</span>
+<button class="px-2 text-on-surface-variant hover:text-primary transition-colors">+</button>
+</div>
+<span class="text-title-lg font-title-lg text-ink-black">S/ 249.00</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-stack-md items-start p-4 hover:bg-surface-container-low transition-colors duration-300 group">
+<div class="w-24 h-32 bg-surface-variant rounded flex-shrink-0 overflow-hidden relative">
+<div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="A crisp, structured white linen trouser neatly folded on a minimalist marble table. Delicate gold accessories are faintly visible in the soft-focus background. The bright, natural light casts subtle shadows, enhancing the clean lines and sophisticated, airy boutique feel." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-kM3rAslpbqdy_UfEzXilUTk7reEf07VJ3RxQSFiqaW7CPKcMJSOw_0CQzTxv9aqRqBIOokyNGeUiLUnqSnc78n64iNLwZG40DIlIPkAfT8RRxmwhy3bqK-5YjHkybUV6Cy-kIM7dMCwS1BU1hwcJPiIQAn6_fKK_L3W-rQWg9LqsQ918MeAo30YNc_qmzWaIBQgJkH4g3E-wb_jCWxWkUh253cJ9-dqFUt9I_1XIpeg8mQc9zfj0')"></div>
+</div>
+<div class="flex-grow flex flex-col h-full justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-title-lg font-title-lg text-ink-black">Pantalón Lino Blanco</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-1 uppercase tracking-widest">Talla: S | Color: Blanco</p>
+</div>
+<button class="text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div class="flex items-center border border-outline-variant rounded-sm h-8">
+<button class="px-2 text-on-surface-variant hover:text-primary transition-colors">-</button>
+<span class="px-2 text-label-md font-label-md">1</span>
+<button class="px-2 text-on-surface-variant hover:text-primary transition-colors">+</button>
+</div>
+<span class="text-title-lg font-title-lg text-ink-black">S/ 320.00</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Order Tracking -->
+
+<section class="animate-fade-in-up">
+    <h2 class="text-headline-md font-headline-md text-ink-black mb-stack-lg border-b border-outline-variant pb-4">Sugerencias para ti</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <!-- Suggestion 1 -->
+        <div class="group cursor-pointer">
+            <div class="aspect-[3/4] bg-surface-variant rounded overflow-hidden mb-4 relative">
+                <div class="bg-cover bg-center w-full h-full transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuApLBiUGMeje-fHRPcRy-YLoG1ykB4C3rpV0gHqHrtB2hVWsGIfjOOGOP9xerNPVl26AYUzhEqbDVX5UOLi_k58tfX3cugbaQ318yH5HggDhFi0PIcypiFRKkftB0tthXXBhXkHnOSeKz2IeUsSonrMiFgxHjADbgLuzwj9LXc397Psc1I-p6zi-dxE_-JL4edp-pvi34OThFQgjgHQ2xV-KaYrooE9cDHZ5tWv1xlZxpeUuU4S_hJa')"></div>
+            </div>
+            <h3 class="text-label-md font-label-md text-ink-black uppercase tracking-widest">Top Lino Arena</h3>
+            <p class="text-body-md text-on-surface-variant mt-1">S/ 189.00</p>
+        </div>
+        <!-- Suggestion 2 -->
+        <div class="group cursor-pointer">
+            <div class="aspect-[3/4] bg-surface-variant rounded overflow-hidden mb-4 relative">
+                <div class="bg-cover bg-center w-full h-full transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-kM3rAslpbqdy_UfEzXilUTk7reEf07VJ3RxQSFiqaW7CPKcMJSOw_0CQzTxv9aqRqBIOokyNGeUiLUnqSnc78n64iNLwZG40DIlIPkAfT8RRxmwhy3bqK-5YjHkybUV6Cy-kIM7dMCwS1BU1hwcJPiIQAn6_fKK_L3W-rQWg9LqsQ918MeAo30YNc_qmzWaIBQgJkH4g3E-wb_jCWxWkUh253cJ9-dqFUt9I_1XIpeg8mQc9zfj0')"></div>
+            </div>
+            <h3 class="text-label-md font-label-md text-ink-black uppercase tracking-widest">Short Sastre Marfil</h3>
+            <p class="text-body-md text-on-surface-variant mt-1">S/ 210.00</p>
+        </div>
+        <!-- Suggestion 3 -->
+        <div class="group cursor-pointer">
+            <div class="aspect-[3/4] bg-surface-variant rounded overflow-hidden mb-4 relative">
+                <div class="bg-cover bg-center w-full h-full transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGZgzA5Est2bIQNcyOf4LpimrMlQ7TLW4-BmjgdoC9HdIpUEEPlT4ovk-dBW-1KSMp4CFWRBJRrZPKf_uiitD6C-mvNaro5SUV8FH4XSU5MbOjhgqDqERzHlIkndknj2l9TkBI09SA-DIIxCOYVUAMz5v8S9zTJLOo2-co2vEKnrn-rGieTwsBmBP1NWDly2lw-IvsntXSclZ3wW_8BZn03wTjTRzsNPZSWS8zOPRKFDuN3nha7ikM')"></div>
+            </div>
+            <h3 class="text-label-md font-label-md text-ink-black uppercase tracking-widest">Pañuelo Seda Floral</h3>
+            <p class="text-body-md text-on-surface-variant mt-1">S/ 95.00</p>
+        </div>
+    </div>
+</section></div>
+<!-- Right Column: Checkout Form & Summary Sticky -->
+<div class="lg:col-span-5 z-10 relative">
+<div class="sticky top-32 bg-white p-stack-lg shadow-xl shadow-surface-variant/50 flex flex-col gap-stack-lg border border-outline-variant/20">
+<h2 class="text-headline-md font-headline-md text-ink-black border-b border-outline-variant pb-2">Resumen</h2>
+<div class="flex flex-col gap-4 text-body-md font-body-md text-on-surface-variant">
+<div class="flex justify-between">
+<span class="">Subtotal</span>
+<span class="">S/ 569.00</span>
+</div>
+<div class="flex justify-between">
+<span class="">Envío (Calculado al final)</span>
+<span class="">-</span>
+</div>
+<div class="flex justify-between text-ink-black font-semibold text-title-lg font-title-lg pt-4 border-t border-outline-variant/50">
+<span class="">Total Estimado</span>
+<span class="">S/ 569.00</span>
+</div>
+</div>
+<!-- Minimalist Checkout Form -->
+<form class="flex flex-col gap-6 mt-4">
+<h3 class="text-title-lg font-title-lg text-ink-black">Datos de Envío</h3>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 text-body-md font-body-md placeholder:text-outline-variant transition-colors" placeholder="Nombre Completo" type="text">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 text-body-md font-body-md placeholder:text-outline-variant transition-colors" placeholder="Correo Electrónico" type="email">
+<div class="flex gap-4">
+<select class="w-1/3 bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 text-body-md font-body-md text-on-surface-variant transition-colors appearance-none">
+<option>Lima</option>
+<option>Provincias</option>
+</select>
+<input class="w-2/3 bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 text-body-md font-body-md placeholder:text-outline-variant transition-colors" placeholder="Dirección Exacta" type="text">
+</div>
+<div class="mt-4">
+<p class="text-label-md font-label-md text-ink-black mb-3">Preferencia de Contacto</p>
+<div class="flex gap-4">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="text-antique-gold focus:ring-antique-gold" name="contact" type="radio">
+<span class="text-body-md font-body-md text-on-surface-variant group-hover:text-ink-black transition-colors">WhatsApp</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="text-antique-gold focus:ring-antique-gold" name="contact" type="radio">
+<span class="text-body-md font-body-md text-on-surface-variant group-hover:text-ink-black transition-colors">Facebook Messenger</span>
+</label>
+</div>
+</div>
+<button class="w-full bg-ink-black text-white hover:bg-primary py-4 text-label-md font-label-md uppercase tracking-widest transition-colors duration-300 mt-4 shadow-md hover:shadow-lg" type="button">
+                        Finalizar Compra
+                    </button>
+<p class="text-label-sm font-label-sm text-center text-outline text-[10px]">Pago seguro y encriptado. Envío estándar 2-3 días hábiles.</p>
+</form>
+</div>
+</div>
+</main>
+<!-- SideNavBar (Mini-Cart Drawer) -->
+<div class="fixed inset-0 bg-ink-black/20 backdrop-blur-sm z-[55] hidden transition-opacity duration-300 opacity-0" id="side-nav-overlay"></div>
+<aside class="fixed right-0 h-full w-96 z-[60] bg-white dark:bg-ink-black shadow-2xl flex flex-col p-stack-lg translate-x-full transition-transform duration-500 ease-in-out" id="side-nav">
+<!-- Header -->
+<div class="flex justify-between items-center mb-stack-lg pb-4 border-b border-outline-variant/30">
+<div>
+<h2 class="text-headline-sm font-headline-md text-primary">Your Bag</h2>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-widest mt-1">Luxury selection</p>
+</div>
+<button class="text-outline hover:text-primary transition-colors" id="close-cart">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Mini-cart Items -->
+<div class="flex-grow overflow-y-auto no-scrollbar flex flex-col gap-stack-md">
+<!-- Item Mini 1 -->
+<div class="flex gap-4 items-center group">
+<div class="w-16 h-20 bg-surface-variant rounded overflow-hidden">
+<div class="bg-cover bg-center w-full h-full transform group-hover:scale-110 transition-transform duration-500" data-alt="A small thumbnail showing a detail shot of the blush pink silk blouse, focusing on the refined stitching and soft sheen of the material under high-key lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGZgzA5Est2bIQNcyOf4LpimrMlQ7TLW4-BmjgdoC9HdIpUEEPlT4ovk-dBW-1KSMp4CFWRBJRrZPKf_uiitD6C-mvNaro5SUV8FH4XSU5MbOjhgqDqERzHlIkndknj2l9TkBI09SA-DIIxCOYVUAMz5v8S9zTJLOo2-co2vEKnrn-rGieTwsBmBP1NWDly2lw-IvsntXSclZ3wW_8BZn03wTjTRzsNPZSWS8zOPRKFDuN3nha7ikM')"></div>
+</div>
+<div class="flex-grow">
+<h4 class="text-body-md font-body-md text-ink-black">Blusa Seda Rosé</h4>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Qty: 1</p>
+</div>
+<span class="text-body-md font-body-md font-semibold text-ink-black">S/ 249</span>
+</div>
+<!-- Item Mini 2 -->
+<div class="flex gap-4 items-center group">
+<div class="w-16 h-20 bg-surface-variant rounded overflow-hidden">
+<div class="bg-cover bg-center w-full h-full transform group-hover:scale-110 transition-transform duration-500" data-alt="A small thumbnail of the white linen trousers, capturing the crisp texture and clean silhouette against a bright, airy background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0xEdRzRTHQS56Osnb7EinlcYmzZtYpT5KYTkEWQscPdWcSeucbmweC9bYzxsn0yZ3iQ6jn6GwDowTxpVcrAJnGVi1X33memaxezL3MfI-yapgJKD9yZVho8GimOn-DxgKBdxBKz7XTp8sJeeYgZW-1H9B4Uv_NPrJiNxby6cP7GAxpYNsGbs2MYgCb9xY5IH2p64uMgK0ycuzQOwxQ2pcuVtMDelzZq6dTbi2IQOgdaA5PNCj4_fW')"></div>
+</div>
+<div class="flex-grow">
+<h4 class="text-body-md font-body-md text-ink-black">Pantalón Lino Blanco</h4>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Qty: 1</p>
+</div>
+<span class="text-body-md font-body-md font-semibold text-ink-black">S/ 320</span>
+</div>
+</div>
+<!-- Footer Mini-cart -->
+<div class="pt-stack-lg border-t border-outline-variant/30 mt-auto">
+<div class="flex justify-between items-center mb-4">
+<span class="text-title-lg font-title-lg text-on-surface-variant">Subtotal</span>
+<span class="text-title-lg font-title-lg text-ink-black">S/ 569.00</span>
+</div>
+<button class="w-full bg-ink-black text-white hover:bg-primary py-4 text-label-md font-label-md uppercase tracking-widest transition-colors duration-300">
+                Checkout Now
+            </button>
+</div>
+</aside>
+<!-- Footer -->
+<footer class="bg-blush-silk dark:bg-ink-black w-full border-t border-outline-variant dark:border-outline/10 mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-lg md:py-section-gap max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<span class="text-headline-md font-headline-md text-primary font-bold uppercase tracking-widest">Aelia Boutique</span>
+<p class="text-label-sm font-label-sm text-on-surface-variant">© 2024 Aelia Boutique. All rights reserved.</p>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-on-surface-variant hover:text-antique-gold transition-colors duration-200 text-label-sm font-label-sm uppercase" href="#">Help Center</a>
+<a class="text-on-surface-variant hover:text-antique-gold transition-colors duration-200 text-label-sm font-label-sm uppercase" href="#">Terms &amp; Conditions</a>
+</div>
+<div class="flex flex-col gap-2 md:items-end">
+<a class="text-on-surface-variant hover:text-antique-gold transition-colors duration-200 text-label-sm font-label-sm uppercase" href="#">Libro de Reclamaciones</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple JS for Cart Drawer Toggle
+        const cartToggle = document.getElementById('cart-toggle');
+        const sideNav = document.getElementById('side-nav');
+        const sideNavOverlay = document.getElementById('side-nav-overlay');
+        const closeCart = document.getElementById('close-cart');
+
+        function openCart() {
+            sideNav.classList.remove('translate-x-full');
+            sideNavOverlay.classList.remove('hidden');
+            // Small delay to allow display:block to apply before opacity transition
+            setTimeout(() => {
+                sideNavOverlay.classList.remove('opacity-0');
+            }, 10);
+        }
+
+        function closeCartDrawer() {
+            sideNav.classList.add('translate-x-full');
+            sideNavOverlay.classList.add('opacity-0');
+            setTimeout(() => {
+                sideNavOverlay.classList.add('hidden');
+            }, 300);
+        }
+
+        cartToggle.addEventListener('click', openCart);
+        closeCart.addEventListener('click', closeCartDrawer);
+        sideNavOverlay.addEventListener('click', closeCartDrawer);
+    </script>
+
+
+</body></html>

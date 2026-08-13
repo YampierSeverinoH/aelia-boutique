@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Track Order - Aelia Boutique</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed": "#00210e",
+                      "on-primary-fixed-variant": "#673a42",
+                      "primary": "#825159",
+                      "on-background": "#1f1a1b",
+                      "on-tertiary-fixed-variant": "#2a4e35",
+                      "outline-variant": "#d5c2c4",
+                      "surface-tint": "#825159",
+                      "surface-container": "#f6ebec",
+                      "on-error": "#ffffff",
+                      "on-surface": "#1f1a1b",
+                      "ink-black": "#1A1A1A",
+                      "surface-bright": "#fff8f7",
+                      "on-secondary-fixed": "#261900",
+                      "background": "#fff8f7",
+                      "on-primary-fixed": "#330f17",
+                      "primary-container": "#e5a8b1",
+                      "inverse-surface": "#352f2f",
+                      "on-tertiary-container": "#2c5037",
+                      "tertiary-fixed": "#c3edcb",
+                      "tertiary-container": "#9ac2a2",
+                      "secondary-fixed-dim": "#e9c176",
+                      "surface-dim": "#e2d8d8",
+                      "error": "#ba1a1a",
+                      "on-secondary-fixed-variant": "#5d4201",
+                      "outline": "#837375",
+                      "on-primary": "#ffffff",
+                      "inverse-primary": "#f5b6bf",
+                      "on-secondary-container": "#785a1a",
+                      "error-container": "#ffdad6",
+                      "surface-container-low": "#fcf1f1",
+                      "secondary-fixed": "#ffdea5",
+                      "primary-fixed-dim": "#f5b6bf",
+                      "on-surface-variant": "#514345",
+                      "soft-gray": "#F5F5F5",
+                      "surface-variant": "#ebe0e0",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-container": "#fed488",
+                      "inverse-on-surface": "#f9eeee",
+                      "on-error-container": "#93000a",
+                      "antique-gold": "#B38B4D",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed-dim": "#a8d0b0",
+                      "tertiary": "#42664c",
+                      "blush-silk": "#FDF3F4",
+                      "surface": "#fff8f7",
+                      "surface-container-highest": "#ebe0e0",
+                      "on-primary-container": "#693b43",
+                      "primary-fixed": "#ffd9de",
+                      "on-secondary": "#ffffff",
+                      "surface-container-high": "#f0e6e6",
+                      "secondary": "#775a19"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "stack-lg": "32px",
+                      "gutter": "24px",
+                      "container-max": "1440px",
+                      "stack-sm": "8px",
+                      "margin-mobile": "20px",
+                      "stack-md": "16px",
+                      "section-gap": "120px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Libre Caslon Text"
+                      ],
+                      "display-lg": [
+                              "Libre Caslon Text"
+                      ],
+                      "label-sm": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Libre Caslon Text"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "title-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Libre Caslon Text"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "72px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.08em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "title-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col">
+<!-- TopNavBar (Web) -->
+<nav class="hidden md:flex w-full sticky top-0 z-50 border-b border-outline-variant/30 bg-surface/80 backdrop-blur-md">
+<div class="flex justify-between items-center max-w-[1440px] w-full mx-auto px-margin-desktop py-stack-md">
+<div class="flex-1 flex gap-stack-lg items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Shop</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="flex-1 flex justify-center">
+<a class="font-headline-lg text-headline-lg tracking-widest text-primary dark:text-primary-fixed-dim" href="#">
+                    Aelia Boutique
+                </a>
+</div>
+<div class="flex-1 flex justify-end gap-stack-md items-center">
+<div class="relative bg-soft-gray rounded-full px-4 py-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[20px]" data-icon="search" data-weight="fill" style="font-variation-settings: 'FILL' 1;">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md p-0 w-32 placeholder:text-outline/70" placeholder="Search..." type="text"/>
+</div>
+<button class="hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" data-icon="shopping_bag" data-weight="fill" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+</button>
+<button class="hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" data-icon="person" data-weight="fill" style="font-variation-settings: 'FILL' 1;">person</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- SideNavBar (Mobile) -->
+<div class="md:hidden h-full w-80 fixed left-0 top-0 z-[60] bg-surface dark:bg-on-tertiary-fixed border-r border-outline-variant/20 shadow-sm flex flex-col p-stack-md transform -translate-x-full transition-transform duration-300" id="mobile-nav">
+<div class="flex items-center gap-4 mb-stack-lg pb-stack-md border-b border-outline-variant/20">
+<img class="w-12 h-12 rounded-full object-cover border border-outline-variant/30" data-alt="A small, elegant circular brand icon for Aelia Boutique featuring delicate rose-gold monogram on a soft white background. Minimalist luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAffrIQrIUG6Za8dh-DJ7zrDyIO8WWUJPnJDYfyP3JbMg7k_wG5eTrR0-GySww58A7pRhCsCxYVAHGLj4YdExeJQ6qP1oBiJbhQBkoIYoR82egOC0zexQVUiEdqiEd0c9Xg8sj4GTwjq8oOqRy-j9SDoFsOZ8JcsxoD8X-MZFBTBlHE7c_uXzOGsp1GhME_eOfhjq3M8Lnglw6mH8-_qNvEMuhfn8ehF2il1IHGyvFAx-0uakRPKCJo"/>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">Aelia Boutique</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Luxury &amp; Grace</p>
+</div>
+<button class="ml-auto text-on-surface-variant" onclick="document.getElementById('mobile-nav').classList.add('-translate-x-full')">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-stack-sm flex-1">
+<a class="flex items-center gap-4 p-3 font-label-md text-label-md text-on-surface-variant hover:bg-soft-gray/50 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+                Home
+            </a>
+<a class="flex items-center gap-4 p-3 font-label-md text-label-md text-on-surface-variant hover:bg-soft-gray/50 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+                Collections
+            </a>
+<a class="flex items-center gap-4 p-3 font-label-md text-label-md text-primary font-semibold bg-blush-silk/50 rounded-lg transform scale-95 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="local_shipping" data-weight="fill" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+                Track Order
+            </a>
+<a class="flex items-center gap-4 p-3 font-label-md text-label-md text-on-surface-variant hover:bg-soft-gray/50 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+                Complaints
+            </a>
+<a class="flex items-center gap-4 p-3 font-label-md text-label-md text-on-surface-variant hover:bg-soft-gray/50 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+                About
+            </a>
+</div>
+</div>
+<!-- Mobile Header (trigger for nav) -->
+<div class="md:hidden w-full sticky top-0 z-50 border-b border-outline-variant/30 bg-surface/80 backdrop-blur-md p-margin-mobile flex justify-between items-center">
+<button class="text-primary" onclick="document.getElementById('mobile-nav').classList.remove('-translate-x-full')">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<span class="font-headline-lg-mobile text-headline-lg-mobile tracking-widest text-primary">Aelia</span>
+<button class="text-primary">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+<main class="flex-1 max-w-[1440px] w-full mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col items-center">
+<div class="w-full max-w-2xl text-center mb-stack-lg">
+<h1 class="font-display-lg text-display-lg text-primary mb-stack-sm md:hidden hidden">Track Your Order</h1>
+<h1 class="font-display-lg text-display-lg text-primary mb-stack-sm hidden md:block">Track Your Order</h1>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-stack-sm md:hidden">Track Your Order</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mx-auto">Enter your order number below to receive real-time updates on your luxury purchase.</p>
+</div>
+<div class="w-full max-w-md mb-section-gap">
+<div class="relative flex flex-col gap-stack-md">
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 px-0 py-3 font-body-lg text-body-lg text-on-surface placeholder:text-outline-variant/70 transition-colors" id="order-input" placeholder="Order Number (e.g., AE-12345)" type="text"/>
+</div>
+<button class="w-full bg-ink-black text-on-primary font-label-md text-label-md py-4 uppercase tracking-widest hover:bg-primary transition-colors duration-300">
+                    Track
+                </button>
+</div>
+</div>
+<div class="w-full max-w-4xl bg-white/50 backdrop-blur-sm rounded-3xl p-stack-lg md:p-margin-desktop border border-outline-variant/20 shadow-[0_4px_40px_-10px_rgba(130,81,89,0.05)] relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-blush-silk/20 to-transparent pointer-events-none"></div>
+<div class="relative z-10">
+<div class="flex justify-between items-end mb-stack-lg pb-stack-md border-b border-outline-variant/30">
+<div>
+<p class="font-label-sm text-label-sm text-outline mb-1 uppercase">Order Status</p>
+<h3 class="font-headline-md text-headline-md text-primary">Order #AE-98273</h3>
+</div>
+<div class="text-right">
+<p class="font-label-sm text-label-sm text-outline mb-1 uppercase">Estimated Delivery</p>
+<p class="font-title-lg text-title-lg text-on-surface">Oct 24, 2024</p>
+</div>
+</div>
+<div class="relative py-stack-lg">
+<div class="absolute top-1/2 left-0 w-full h-[2px] bg-surface-variant -translate-y-1/2 rounded-full hidden md:block"></div>
+<div class="absolute top-1/2 left-0 h-[2px] bg-antique-gold -translate-y-1/2 rounded-full hidden md:block" style="width: 50%;"></div>
+<div class="absolute left-6 top-0 h-full w-[2px] bg-surface-variant md:hidden"></div>
+<div class="absolute left-6 top-0 w-[2px] bg-antique-gold md:hidden" style="height: 50%;"></div>
+<div class="flex flex-col md:flex-row justify-between relative z-10 gap-stack-lg md:gap-0">
+<div class="flex md:flex-col items-center md:items-center gap-4 md:gap-3 group">
+<div class="w-12 h-12 rounded-full bg-antique-gold text-on-primary flex items-center justify-center shadow-lg relative z-10">
+<span class="material-symbols-outlined" data-icon="inventory_2" data-weight="fill" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+</div>
+<div class="md:text-center">
+<p class="font-label-md text-label-md text-on-surface uppercase mb-1">Processing</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Oct 18, 10:00 AM</p>
+</div>
+</div>
+<div class="flex md:flex-col items-center md:items-center gap-4 md:gap-3 group">
+<div class="w-12 h-12 rounded-full bg-antique-gold text-on-primary flex items-center justify-center shadow-lg relative z-10">
+<span class="material-symbols-outlined" data-icon="local_shipping" data-weight="fill" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+</div>
+<div class="md:text-center">
+<p class="font-label-md text-label-md text-on-surface uppercase mb-1">Shipped</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Oct 19, 02:30 PM</p>
+</div>
+</div>
+<div class="flex md:flex-col items-center md:items-center gap-4 md:gap-3 group">
+<div class="w-12 h-12 rounded-full bg-surface-container border-2 border-antique-gold text-antique-gold flex items-center justify-center relative z-10">
+<span class="material-symbols-outlined" data-icon="flight_takeoff">flight_takeoff</span>
+</div>
+<div class="md:text-center">
+<p class="font-label-md text-label-md text-primary uppercase mb-1 font-semibold">In Transit</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Currently moving</p>
+</div>
+</div>
+<div class="flex md:flex-col items-center md:items-center gap-4 md:gap-3 group">
+<div class="w-12 h-12 rounded-full bg-surface-variant text-outline flex items-center justify-center relative z-10">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</div>
+<div class="md:text-center">
+<p class="font-label-md text-label-md text-outline uppercase mb-1">Delivered</p>
+<p class="font-body-md text-body-md text-outline/50 text-sm">Pending</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface-container dark:bg-on-tertiary-fixed border-t border-blush-silk dark:border-on-tertiary-fixed-variant mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg max-w-[1440px] mx-auto px-margin-desktop">
+<div class="flex flex-col gap-stack-md">
+<span class="font-headline-md text-headline-md text-primary">Aelia Boutique</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Elevating everyday grace with curated, timeless pieces.</p>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<h4 class="font-label-md text-label-md text-primary mb-2">Customer Care</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Order Tracking</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Complaints Book</a>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<h4 class="font-label-md text-label-md text-primary mb-2">Legal</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<h4 class="font-label-md text-label-md text-primary mb-2">Connect</h4>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="mail">mail</span></a>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-margin-desktop mt-stack-lg pt-stack-md border-t border-outline-variant/20 text-center md:text-left">
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">© 2024 Aelia Boutique. All rights reserved.</p>
+</div>
+</footer>
+</body></html>
