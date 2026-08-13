@@ -232,19 +232,24 @@
             <div class="space-y-4">
                 <span class="font-serif text-2xl text-primary">Aelia Boutique</span>
                 <p class="text-xs text-on-surface-variant leading-relaxed">
-                    Elegancia sin esfuerzo. Colecciones exclusivas diseñadas con la máxima atención al detalle y
-                    acabados de alta costura.
+                    {{ optional($companyInfo)->descripcion ?? 'Elegancia sin esfuerzo. Colecciones exclusivas diseñadas con la máxima atención al detalle y acabados de alta costura.' }}
                 </p>
                 <div class="flex gap-3 text-primary">
-                    <a href="https://instagram.com" target="_blank"
-                        class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm hover:bg-primary hover:text-white transition-colors"><span
-                            class="material-symbols-outlined text-sm">photo_camera</span></a>
-                    <a href="https://facebook.com" target="_blank"
-                        class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm hover:bg-primary hover:text-white transition-colors"><span
-                            class="material-symbols-outlined text-sm">public</span></a>
-                    <a href="https://wa.me/51987654321" target="_blank"
-                        class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm hover:bg-primary hover:text-white transition-colors"><span
-                            class="material-symbols-outlined text-sm">chat</span></a>
+                    @if(optional($companyInfo)->link_instagram)
+                        <a href="{{ $companyInfo->link_instagram }}" target="_blank" title="Instagram"
+                            class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm hover:bg-primary hover:text-white transition-colors"><span
+                                class="material-symbols-outlined text-sm">photo_camera</span></a>
+                    @endif
+                    @if(optional($companyInfo)->link_facebook)
+                        <a href="{{ $companyInfo->link_facebook }}" target="_blank" title="Facebook"
+                            class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm hover:bg-primary hover:text-white transition-colors"><span
+                                class="material-symbols-outlined text-sm">public</span></a>
+                    @endif
+                    @if(optional($companyInfo)->telefono)
+                        <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $companyInfo->telefono) }}" target="_blank" title="WhatsApp"
+                            class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm hover:bg-primary hover:text-white transition-colors"><span
+                                class="material-symbols-outlined text-sm">chat</span></a>
+                    @endif
                 </div>
             </div>
 
@@ -279,15 +284,29 @@
             </div>
 
             <div class="space-y-3 text-xs text-on-surface-variant">
-                <h4 class="font-semibold text-xs uppercase tracking-widest text-primary">Atención al Cliente</h4>
-                <p>📍 San Isidro, Lima - Perú</p>
-                <p>💬 WhatsApp: +51 987 654 321</p>
-                <p>✉️ contacto@aeliaboutique.pe</p>
+                <h4 class="font-semibold text-xs uppercase tracking-widest text-primary mb-4">Atención al Cliente</h4>
+                @if(optional($companyInfo)->direccion)
+                    <p>📍 {{ $companyInfo->direccion }}</p>
+                @endif
+                @if(optional($companyInfo)->telefono)
+                    <p>💬 WhatsApp: {{ $companyInfo->telefono }}</p>
+                @endif
+                @if(optional($companyInfo)->correo)
+                    <p>✉️ {{ $companyInfo->correo }}</p>
+                @endif
+                @if(optional($companyInfo)->horario)
+                    <p>⏰ {{ $companyInfo->horario }}</p>
+                @endif
             </div>
         </div>
         <div
-            class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-12 pt-6 border-t border-outline-variant/20 text-center text-xs text-on-surface-variant/70">
-            &copy; {{ date('Y') }} Aelia Boutique. Todos los derechos reservados.
+            class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-12 pt-6 border-t border-outline-variant/20 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant/70">
+            <div>
+                &copy; {{ date('Y') }} Aelia Boutique. Todos los derechos reservados.
+            </div>
+            <div>
+                Desarrollado por <a href="https://cadi-soft.com" target="_blank" rel="noopener" class="font-bold text-primary hover:underline">cadi-soft.com</a>
+            </div>
         </div>
     </footer>
 

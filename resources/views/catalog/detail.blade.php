@@ -35,8 +35,8 @@
             <!-- Thumbnail Carousel -->
             <div class="flex gap-3 overflow-x-auto pb-2">
                 @foreach($product->images as $img)
-                    <button @click="activeImage = '{{ asset('storage/' . $img->path) }}'" :class="activeImage === '{{ asset('storage/' . $img->path) }}' ? 'border-primary ring-2 ring-primary/20' : 'border-outline-variant/30'" class="w-20 h-24 rounded-lg overflow-hidden border-2 flex-shrink-0 bg-surface-container-low transition-all">
-                        <img src="{{ asset('storage/' . $img->path) }}" alt="{{ $img->alt }}" class="w-full h-full object-cover">
+                    <button @click="activeImage = '{{ $img->url }}'" :class="activeImage === '{{ $img->url }}' ? 'border-primary ring-2 ring-primary/20' : 'border-outline-variant/30'" class="w-20 h-24 rounded-lg overflow-hidden border-2 flex-shrink-0 bg-surface-container-low transition-all">
+                        <img src="{{ $img->url }}" alt="{{ $img->alt }}" class="w-full h-full object-cover">
                     </button>
                 @endforeach
             </div>
@@ -74,7 +74,7 @@
                     
                     <div class="grid grid-cols-2 gap-3">
                         @foreach($product->variants as $variant)
-                            <button type="button" @click="selectVariant({{ $variant->id }}, {{ $variant->effective_price }}, '{{ $variant->sku }}', {{ $variant->stock }})" :class="selectedVariantId === {{ $variant->id }} ? 'border-primary bg-blush-silk text-primary font-bold shadow-sm' : 'border-outline-variant/40 bg-white text-on-surface hover:border-primary/50'" class="p-3 rounded-lg border text-xs text-left flex justify-between items-center transition-all">
+                            <button type="button" @click="selectVariant({{ $variant->id }}, {{ $variant->effective_price }}, '{{ $variant->sku }}', {{ $variant->stock }}, '{{ $variant->primary_image_url }}')" :class="selectedVariantId === {{ $variant->id }} ? 'border-primary bg-blush-silk text-primary font-bold shadow-sm' : 'border-outline-variant/40 bg-white text-on-surface hover:border-primary/50'" class="p-3 rounded-lg border text-xs text-left flex justify-between items-center transition-all">
                                 <div>
                                     <span class="block font-medium">{{ $variant->name }}</span>
                                     <span class="text-[10px] text-on-surface-variant/70">Stock: {{ $variant->stock }}</span>
@@ -157,12 +157,15 @@
             selectedVariantId: variantsData && variantsData.length > 0 ? variantsData[0].id : null,
             activePrice: variantsData && variantsData.length > 0 ? parseFloat(variantsData[0].effective_price) : {{ $product->effective_price }},
             activeSku: variantsData && variantsData.length > 0 ? variantsData[0].sku : '{{ $product->sku }}',
-            activeImage: '{{ $product->primaryImage ? asset("storage/" . $product->primaryImage->path) : ($product->images->isNotEmpty() ? asset("storage/" . $product->images->first()->path) : "") }}',
+            activeImage: '{{ $product->primary_image_url }}',
             quantity: 1,
-            selectVariant(id, price, sku, stock) {
+            selectVariant(id, price, sku, stock, imageUrl = '') {
                 this.selectedVariantId = id;
                 this.activePrice = parseFloat(price);
                 this.activeSku = sku;
+                if (imageUrl && imageUrl.trim() !== '') {
+                    this.activeImage = imageUrl;
+                }
             },
             submitToCart(productId) {
                 window.dispatchEvent(new CustomEvent('add-to-cart', {

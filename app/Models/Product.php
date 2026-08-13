@@ -102,6 +102,27 @@ class Product extends Model
         return (int) $this->stock;
     }
 
+    public function getPrimaryImageUrlAttribute(): ?string
+    {
+        if ($this->primaryImage) {
+            return $this->primaryImage->url;
+        }
+
+        if ($this->images->isNotEmpty()) {
+            return $this->images->first()->url;
+        }
+
+        if ($this->relationLoaded('variants') && $this->variants->isNotEmpty()) {
+            foreach ($this->variants as $variant) {
+                if ($variant->primary_image_url) {
+                    return $variant->primary_image_url;
+                }
+            }
+        }
+
+        return null;
+    }
+
     public function scopeActive($query)
     {
         return $query->where('is_active', true);

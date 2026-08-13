@@ -25,4 +25,13 @@ class ProductVariantImage extends Model
     {
         return $this->belongsTo(ProductVariant::class, 'product_variant_id');
     }
+
+    public function getUrlAttribute(): string
+    {
+        if (str_starts_with($this->path, 'http://') || str_starts_with($this->path, 'https://')) {
+            return $this->path;
+        }
+
+        return asset('storage/' . $this->path);
+    }
 }

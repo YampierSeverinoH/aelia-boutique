@@ -33,6 +33,18 @@ class ProductVariant extends Model
         'is_active' => 'boolean',
     ];
 
+    protected $appends = ['primary_image_url', 'effective_price', 'discount_percentage'];
+
+    public function getPrimaryImageUrlAttribute(): ?string
+    {
+        $firstImage = $this->images->first();
+        if ($firstImage) {
+            return $firstImage->url;
+        }
+
+        return null;
+    }
+
     public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);

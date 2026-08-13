@@ -2,11 +2,8 @@
     class="group bg-white rounded-xl overflow-hidden border border-outline-variant/30 hover:border-primary/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
     <div class="relative aspect-[3/4] bg-surface-container-low overflow-hidden">
         <!-- Image -->
-        @if ($product->primaryImage)
-            <img src="{{ asset('storage/' . $product->primaryImage->path) }}" alt="{{ $product->name }}"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-        @elseif($product->images->isNotEmpty())
-            <img src="{{ asset('storage/' . $product->images->first()->path) }}" alt="{{ $product->name }}"
+        @if ($product->primary_image_url)
+            <img src="{{ $product->primary_image_url }}" alt="{{ $product->name }}"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
         @else
             <div class="w-full h-full flex items-center justify-center text-on-surface-variant/40">
