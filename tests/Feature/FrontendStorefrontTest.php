@@ -41,6 +41,13 @@ class FrontendStorefrontTest extends TestCase
             ->assertSee('Colección Completa');
     }
 
+    public function test_color_filtered_catalog_loads(): void
+    {
+        $response = $this->get('/catalogo?color=rosado-silk');
+        $response->assertStatus(200)
+            ->assertSee('Colección Completa');
+    }
+
     public function test_category_filtered_catalog_loads(): void
     {
         $category = Category::first();

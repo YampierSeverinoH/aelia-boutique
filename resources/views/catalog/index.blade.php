@@ -84,10 +84,28 @@
             <!-- Color Filter Swatches -->
             @if($colors->isNotEmpty())
                 <div class="space-y-2 border-t border-outline-variant/30 pt-4">
-                    <h4 class="text-xs uppercase tracking-widest font-semibold text-primary">Colores</h4>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-xs uppercase tracking-widest font-semibold text-primary">Colores</h4>
+                        @if(request('color'))
+                            <a href="{{ request()->fullUrlWithQuery(['color' => null]) }}" class="text-[10px] text-primary underline">Limpiar color</a>
+                        @endif
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-1">
                         @foreach($colors as $color)
-                            <div title="{{ $color->name }}" class="w-6 h-6 rounded-full border border-black/20 shadow-xs cursor-pointer" style="background-color: {{ $color->hex_code }}"></div>
+                            @php
+                                $isSelected = request('color') === $color->slug || request('color') == $color->id;
+                                $colorUrl = $isSelected 
+                                    ? request()->fullUrlWithQuery(['color' => null]) 
+                                    : request()->fullUrlWithQuery(['color' => $color->slug]);
+                            @endphp
+                            <a href="{{ $colorUrl }}" 
+                               title="{{ $color->name }}" 
+                               class="w-7 h-7 rounded-full border-2 transition-all flex items-center justify-center {{ $isSelected ? 'border-primary scale-110 ring-2 ring-primary/40 shadow-md' : 'border-black/20 hover:scale-105' }}" 
+                               style="background-color: {{ $color->hex_code }}">
+                               @if($isSelected)
+                                   <span class="material-symbols-outlined text-xs text-white drop-shadow font-bold">check</span>
+                               @endif
+                            </a>
                         @endforeach
                     </div>
                 </div>

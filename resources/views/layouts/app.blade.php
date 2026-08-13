@@ -362,6 +362,29 @@
             }
         }
     </script>
+    <!-- Eye-catching Floating WhatsApp Widget -->
+    @php
+        $companyWsp = \App\Models\Company::first();
+        $wspPhone = preg_replace('/[^0-9]/', '', optional($companyWsp)->telefono ?? '51987654321');
+        $wspText = urlencode('¡Hola Aelia Boutique! Quisiera información y asesoría sobre sus prendas.');
+    @endphp
+    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3 group" x-data="{ tooltipOpen: true }">
+        <!-- Tooltip Badge Bubble -->
+        <div x-show="tooltipOpen" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-x-2" x-transition:enter-end="opacity-100 translate-x-0" class="bg-white border border-outline-variant/30 text-on-surface shadow-2xl rounded-2xl py-2 px-4 flex items-center gap-3 text-xs font-semibold">
+            <div class="w-2.5 h-2.5 rounded-full bg-[#25D366] animate-ping"></div>
+            <span>💬 ¿Necesitas ayuda? Escríbenos</span>
+            <button @click.stop="tooltipOpen = false" class="text-on-surface-variant/50 hover:text-red-500 text-sm font-bold ml-1">&times;</button>
+        </div>
+
+        <!-- Floating Green WhatsApp Button with Pulse Wave -->
+        <a href="https://wa.me/{{ $wspPhone }}?text={{ $wspText }}" target="_blank" title="Chatear por WhatsApp" class="relative w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300">
+            <!-- Pulsing outer ring -->
+            <span class="absolute -inset-1 rounded-full bg-[#25D366]/40 animate-ping pointer-events-none"></span>
+            <!-- Icon -->
+            <span class="material-symbols-outlined text-3xl font-bold relative z-10">chat</span>
+        </a>
+    </div>
+
 </body>
 
 </html>

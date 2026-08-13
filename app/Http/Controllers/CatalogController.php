@@ -61,6 +61,23 @@ class CatalogController extends Controller
             $query->onSale();
         }
 
+        // Color filter
+        if ($request->filled('color')) {
+            $colorParam = $request->get('color');
+            $query->where(function ($q) use ($colorParam) {
+                $q->whereHas('variants.attributeValues', function ($attrQ) use ($colorParam) {
+                    $attrQ->where('attribute_values.slug', $colorParam);
+                    if (is_numeric($colorParam)) {
+                        $attrQ->orWhere('attribute_values.id', (int) $colorParam);
+                    }
+                })
+                ->orWhereHas('variants', function ($varQ) use ($colorParam) {
+                    $varQ->where('name', 'like', "%{$colorParam}%");
+                })
+                ->orWhere('name', 'like', "%{$colorParam}%");
+            });
+        }
+
         // Sorting
         $sort = $request->get('sort', 'latest');
         match ($sort) {
