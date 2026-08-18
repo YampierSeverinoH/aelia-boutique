@@ -40,6 +40,7 @@ Route::get('/seguimiento', [OrderTrackingController::class, 'index'])->name('tra
 // Páginas Informativas
 Route::get('/nosotros', [PageController::class, 'about'])->name('pages.about');
 Route::get('/contacto', [PageController::class, 'contact'])->name('pages.contact');
+Route::post('/contacto/enviar', [PageController::class, 'processContact'])->name('pages.contact.store');
 Route::get('/terminos-y-condiciones', [PageController::class, 'terms'])->name('pages.terms');
 Route::get('/libro-de-reclamaciones', [PageController::class, 'complaintsBook'])->name('pages.complaints-book');
 Route::post('/libro-de-reclamaciones/enviar', [PageController::class, 'processComplaint'])->name('pages.complaints-book.store');

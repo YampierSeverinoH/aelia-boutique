@@ -43,6 +43,25 @@ class Order extends Model
         return $this->hasMany(OrderItem::class);
     }
 
+    public function getTotalAmountAttribute()
+    {
+        return $this->total;
+    }
+
+    public function getStatusAttribute()
+    {
+        return $this->order_status;
+    }
+
+    public function getPaymentMethodLabelAttribute(): string
+    {
+        return match ($this->payment_method) {
+            'bank_transfer' => 'Depósito / Transferencia Bancaria',
+            'yape_plin' => 'Yape / Plin',
+            default => strtoupper((string) $this->payment_method),
+        };
+    }
+
     public static function generateOrderNumber(): string
     {
         $prefix = 'AEL-';

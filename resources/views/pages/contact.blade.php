@@ -59,19 +59,27 @@
         <div class="bg-white p-8 rounded-2xl border border-outline-variant/30 space-y-6 shadow-xs">
             <h3 class="font-serif text-2xl text-primary">Envíanos un Mensaje</h3>
             
-            <form action="#" method="POST" class="space-y-4">
+            <form action="{{ route('pages.contact.store') }}" method="POST" class="space-y-4">
                 @csrf
                 <div class="space-y-1">
                     <label class="text-xs uppercase tracking-wider font-semibold text-on-surface-variant">Nombre Completo *</label>
-                    <input type="text" required placeholder="Tu nombre..." class="w-full text-xs rounded-lg border-outline-variant/50 focus:border-primary focus:ring-primary py-2.5 px-3">
+                    <input type="text" name="name" required placeholder="Tu nombre..." class="w-full text-xs rounded-lg border-outline-variant/50 focus:border-primary focus:ring-primary py-2.5 px-3">
                 </div>
                 <div class="space-y-1">
                     <label class="text-xs uppercase tracking-wider font-semibold text-on-surface-variant">Correo Electrónico *</label>
-                    <input type="email" required placeholder="tu@email.com" class="w-full text-xs rounded-lg border-outline-variant/50 focus:border-primary focus:ring-primary py-2.5 px-3">
+                    <input type="email" name="email" required placeholder="tu@email.com" class="w-full text-xs rounded-lg border-outline-variant/50 focus:border-primary focus:ring-primary py-2.5 px-3">
+                </div>
+                <div class="space-y-1">
+                    <label class="text-xs uppercase tracking-wider font-semibold text-on-surface-variant">Teléfono / WhatsApp</label>
+                    <input type="text" name="phone" placeholder="Ej: 987 654 321" class="w-full text-xs rounded-lg border-outline-variant/50 focus:border-primary focus:ring-primary py-2.5 px-3">
+                </div>
+                <div class="space-y-1">
+                    <label class="text-xs uppercase tracking-wider font-semibold text-on-surface-variant">Asunto</label>
+                    <input type="text" name="subject" placeholder="Ej: Consulta sobre prendas en stock" class="w-full text-xs rounded-lg border-outline-variant/50 focus:border-primary focus:ring-primary py-2.5 px-3">
                 </div>
                 <div class="space-y-1">
                     <label class="text-xs uppercase tracking-wider font-semibold text-on-surface-variant">Mensaje o Consulta *</label>
-                    <textarea rows="4" required placeholder="Escribe tu consulta aquí..." class="w-full text-xs rounded-lg border-outline-variant/50 focus:border-primary focus:ring-primary py-2.5 px-3"></textarea>
+                    <textarea name="message" rows="4" required placeholder="Escribe tu consulta aquí..." class="w-full text-xs rounded-lg border-outline-variant/50 focus:border-primary focus:ring-primary py-2.5 px-3"></textarea>
                 </div>
                 <button type="submit" class="w-full bg-ink-black text-white py-3.5 rounded-lg text-xs uppercase tracking-widest font-semibold hover:bg-primary transition-colors">Enviar Consulta &rarr;</button>
             </form>

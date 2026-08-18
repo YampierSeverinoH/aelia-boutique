@@ -22,6 +22,10 @@ class CompanyForm
                             ->label('Logo de la Empresa')
                             ->image()
                             ->directory('company'),
+                        FileUpload::make('imagen_bio')
+                            ->label('Imagen / Avatar para Bienvenida Bio (Linktree)')
+                            ->image()
+                            ->directory('company'),
                         TextInput::make('ruc')
                             ->label('RUC')
                             ->placeholder('Ej. 20123456789'),

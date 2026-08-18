@@ -85,6 +85,8 @@ class FrontendStorefrontTest extends TestCase
 
     public function test_checkout_page_and_order_submission(): void
     {
+        \Illuminate\Support\Facades\Mail::fake();
+
         $product = Product::first();
         $shippingRate = ShippingRate::first();
 
@@ -119,6 +121,48 @@ class FrontendStorefrontTest extends TestCase
             'customer_email' => 'maria@example.com',
             'customer_name' => 'María García',
         ]);
+
+        \Illuminate\Support\Facades\Mail::assertSent(\App\Mail\OrderConfirmationCustomerMail::class);
+        \Illuminate\Support\Facades\Mail::assertSent(\App\Mail\OrderNotificationAdminMail::class);
+    }
+
+    public function test_complaints_book_notifications(): void
+    {
+        \Illuminate\Support\Facades\Mail::fake();
+
+        $response = $this->post('/libro-de-reclamaciones/enviar', [
+            'fullname' => 'Ana López',
+            'dni' => '44556677',
+            'email' => 'ana@example.com',
+            'phone' => '912345678',
+            'address' => 'Calle Los Olivos 123',
+            'contracted_type' => 'producto',
+            'amount' => 129.90,
+            'description_good' => 'Blusa Elegance Rosada',
+            'complaint_type' => 'reclamo',
+            'description' => 'La costura del botón vino suelta.',
+            'consumer_request' => 'Solicito cambio de la prenda.',
+        ]);
+
+        $response->assertRedirect();
+        \Illuminate\Support\Facades\Mail::assertSent(\App\Mail\ComplaintConfirmationCustomerMail::class);
+        \Illuminate\Support\Facades\Mail::assertSent(\App\Mail\ComplaintNotificationAdminMail::class);
+    }
+
+    public function test_contact_form_notifications(): void
+    {
+        \Illuminate\Support\Facades\Mail::fake();
+
+        $response = $this->post('/contacto/enviar', [
+            'name' => 'Carlos Pérez',
+            'email' => 'carlos@example.com',
+            'phone' => '998877665',
+            'subject' => 'Consulta sobre disponibilidad',
+            'message' => 'Deseo saber si habrá reposición del vestido Aurora en talla S.',
+        ]);
+
+        $response->assertRedirect();
+        \Illuminate\Support\Facades\Mail::assertSent(\App\Mail\ContactMessageAdminMail::class);
     }
 
     public function test_order_tracking_page(): void

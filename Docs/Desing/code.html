@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Aelia Boutique - Elegancia Sin Esfuerzo</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap"
+                rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "on-tertiary": "#ffffff",
+                                                "tertiary": "#42664c",
+                                                "on-tertiary-fixed": "#00210e",
+                                                "ink-black": "#1A1A1A",
+                                                "secondary-fixed-dim": "#e9c176",
+                                                "on-tertiary-fixed-variant": "#2a4e35",
+                                                "on-surface-variant": "#514345",
+                                                "surface-container-high": "#f0e6e6",
+                                                "surface-variant": "#ebe0e0",
+                                                "on-secondary-fixed-variant": "#5d4201",
+                                                "on-primary": "#ffffff",
+                                                "secondary-container": "#fed488",
+                                                "on-tertiary-container": "#2c5037",
+                                                "on-primary-container": "#693b43",
+                                                "tertiary-container": "#9ac2a2",
+                                                "inverse-on-surface": "#f9eeee",
+                                                "on-surface": "#1f1a1b",
+                                                "outline": "#837375",
+                                                "soft-gray": "#F5F5F5",
+                                                "tertiary-fixed": "#c3edcb",
+                                                "background": "#fff8f7",
+                                                "inverse-primary": "#f5b6bf",
+                                                "surface": "#fff8f7",
+                                                "tertiary-fixed-dim": "#a8d0b0",
+                                                "on-secondary": "#ffffff",
+                                                "blush-silk": "#FDF3F4",
+                                                "antique-gold": "#B38B4D",
+                                                "error": "#ba1a1a",
+                                                "secondary": "#775a19",
+                                                "on-secondary-container": "#785a1a",
+                                                "primary-container": "#e5a8b1",
+                                                "surface-container-highest": "#ebe0e0",
+                                                "error-container": "#ffdad6",
+                                                "on-background": "#1f1a1b",
+                                                "primary-fixed": "#ffd9de",
+                                                "inverse-surface": "#352f2f",
+                                                "surface-bright": "#fff8f7",
+                                                "outline-variant": "#d5c2c4",
+                                                "on-error": "#ffffff",
+                                                "surface-tint": "#825159",
+                                                "on-primary-fixed": "#330f17",
+                                                "primary-fixed-dim": "#f5b6bf",
+                                                "on-secondary-fixed": "#261900",
+                                                "secondary-fixed": "#ffdea5",
+                                                "on-error-container": "#93000a",
+                                                "surface-container-low": "#fcf1f1",
+                                                "surface-dim": "#e2d8d8",
+                                                "surface-container": "#f6ebec",
+                                                "surface-container-lowest": "#ffffff",
+                                                "primary": "#825159",
+                                                "on-primary-fixed-variant": "#673a42"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.125rem",
+                                                "lg": "0.25rem",
+                                                "xl": "0.5rem",
+                                                "full": "0.75rem"
+                                        },
+                                        "spacing": {
+                                                "stack-lg": "32px",
+                                                "margin-mobile": "20px",
+                                                "stack-sm": "8px",
+                                                "container-max": "1440px",
+                                                "stack-md": "16px",
+                                                "gutter": "24px",
+                                                "margin-desktop": "64px",
+                                                "section-gap": "120px"
+                                        },
+                                        "fontFamily": {
+                                                "headline-md": [
+                                                        "Libre Caslon Text"
+                                                ],
+                                                "label-sm": [
+                                                        "Hanken Grotesk"
+                                                ],
+                                                "headline-lg": [
+                                                        "Libre Caslon Text"
+                                                ],
+                                                "display-lg": [
+                                                        "Libre Caslon Text"
+                                                ],
+                                                "body-lg": [
+                                                        "Hanken Grotesk"
+                                                ],
+                                                "headline-lg-mobile": [
+                                                        "Libre Caslon Text"
+                                                ],
+                                                "body-md": [
+                                                        "Hanken Grotesk"
+                                                ],
+                                                "label-md": [
+                                                        "Hanken Grotesk"
+                                                ],
+                                                "title-lg": [
+                                                        "Hanken Grotesk"
+                                                ]
+                                        },
+                                        "fontSize": {
+                                                "headline-md": [
+                                                        "28px",
+                                                        {
+                                                                "lineHeight": "36px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "label-sm": [
+                                                        "12px",
+                                                        {
+                                                                "lineHeight": "16px",
+                                                                "letterSpacing": "0.08em",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "headline-lg": [
+                                                        "40px",
+                                                        {
+                                                                "lineHeight": "48px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "display-lg": [
+                                                        "64px",
+                                                        {
+                                                                "lineHeight": "72px",
+                                                                "letterSpacing": "-0.02em",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "body-lg": [
+                                                        "18px",
+                                                        {
+                                                                "lineHeight": "28px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "headline-lg-mobile": [
+                                                        "32px",
+                                                        {
+                                                                "lineHeight": "40px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "body-md": [
+                                                        "16px",
+                                                        {
+                                                                "lineHeight": "24px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "label-md": [
+                                                        "14px",
+                                                        {
+                                                                "lineHeight": "20px",
+                                                                "letterSpacing": "0.1em",
+                                                                "fontWeight": "500"
+                                                        }
+                                                ],
+                                                "title-lg": [
+                                                        "20px",
+                                                        {
+                                                                "lineHeight": "28px",
+                                                                "letterSpacing": "0.05em",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ]
+                                        }
+                                },
+                        },
+                }
+        </script>
+        <style>
+                .link-btn {
+                        background: #ffffff;
+                        border: 1px solid rgba(130, 81, 89, 0.15);
+                        transition: all 0.3s ease;
+                }
+
+                .link-btn:hover {
+                        border-color: rgba(130, 81, 89, 0.4);
+                        transform: translateY(-2px);
+                        box-shadow: 0 4px 12px rgba(130, 81, 89, 0.05);
+                }
+
+                .primary-link-btn {
+                        background: linear-gradient(135deg, #825159 0%, #a26b74 100%);
+                        box-shadow: 0 4px 12px rgba(130, 81, 89, 0.2);
+                }
+
+                .primary-link-btn:hover {
+                        box-shadow: 0 6px 16px rgba(130, 81, 89, 0.3);
+                        transform: translateY(-2px);
+                }
+        </style>
+</head>
+
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col md:flex-row">
+        <!-- Left Side: Immersive Image -->
+        <div class="hidden md:block md:w-1/2 h-screen relative">
+                <img alt="Aelia Boutique Fashion Editorial" class="absolute inset-0 w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiyrBXYHzrroxFNOwybTx5NcceTgMZOVNEFu1IXTY2jK1f_JDGUHVwA7eHosA1E8QiCVskit-M--OzbK0z_CI1BHIwSmfv97w0VPCpXHUGu6n5P-tcTPVZMbSmALgDZGL32KHIiT03cKS2vtbr61eqBTp2y9eV_5E-BZJK-a0IuZ45ngucWEtuZPVV4f4ACnR9TWstgZr-FyEwKGentdzQ5eJVJvR9ReGteLB3sMpwLTjPYYD-hxAu" />
+                <div class="absolute inset-0 bg-black/10"></div>
+        </div>
+        <!-- Right Side: Link Tree -->
+        <main
+                class="w-full md:w-1/2 min-h-screen flex flex-col justify-center items-center p-margin-mobile md:p-margin-desktop bg-surface z-10 relative overflow-y-auto">
+                <div class="w-full max-w-md mx-auto flex flex-col items-center">
+                        <!-- Logo Header -->
+                        <div class="mb-stack-lg flex flex-col items-center">
+                                <div
+                                        class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-stack-md shadow-lg relative bg-black flex items-center justify-center p-2">
+                                        <img alt="Aelia Boutique Logo" class="w-full h-full object-contain"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl69kZ3nTNL8vAIfRJAyvpYSXaxetqPACw-4YEafiQoH9kUDZs6x-NrzUN9qXbQejSD8m6zmE4lxWH1J-mrgFkx4WryVJT7ce1SWTEbmlVvuEAiSNVdnbm42wcJnA7yPGZtiTtPWkNRreaFy_MmUFcXdUzK9BYtXF6JQYTbT3zJfINhrM-E4TBB_IpOqtPtCfmjWcoRnOwx1ulDhc85-gxiOQofB35wxNIx9y-DbRZN7GfBjOjzgFqbnd7ORe7xofDog" />
+                                </div>
+                                <h1
+                                        class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary text-center tracking-wide">
+                                        Aelia Boutique
+                                </h1>
+                                <p
+                                        class="font-title-lg text-title-lg text-secondary/80 mt-2 text-center uppercase tracking-[0.2em]">
+                                        Elegancia Sin Esfuerzo
+                                </p>
+                        </div>
+                        <!-- Links Container -->
+                        <div class="w-full flex flex-col gap-stack-sm md:gap-stack-md">
+                                <!-- Primary Action (Store) -->
+                                <a class="primary-link-btn rounded-xl p-4 w-full flex items-center justify-between group cursor-pointer text-white"
+                                        href="/home">
+                                        <div class="flex items-center gap-4">
+                                                <div
+                                                        class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1;">storefront</span>
+                                                </div>
+                                                <div class="flex flex-col">
+                                                        <span
+                                                                class="font-label-sm text-label-sm text-white/80 uppercase tracking-widest">Explorar</span>
+                                                        <span class="font-body-lg text-body-lg font-semibold">Tienda
+                                                                Virtual</span>
+                                                </div>
+                                        </div>
+                                        <span
+                                                class="material-symbols-outlined text-white/80 group-hover:text-white transition-colors group-hover:translate-x-1 duration-300">arrow_forward</span>
+                                </a>
+                                <!-- Social/Contact Actions -->
+                                <a class="link-btn rounded-xl p-4 w-full flex items-center justify-between group cursor-pointer text-on-surface"
+                                        href="#">
+                                        <div class="flex items-center gap-4">
+                                                <div
+                                                        class="w-10 h-10 rounded-full bg-[#25D366]/10 flex items-center justify-center text-[#25D366]">
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1;">chat</span>
+                                                </div>
+                                                <div class="flex flex-col">
+                                                        <span
+                                                                class="font-label-sm text-label-sm text-secondary/70 uppercase tracking-widest">Whatsapp</span>
+                                                        <span class="font-body-md text-body-md text-on-surface/90">Escríbenos
+                                                                directo</span>
+                                                </div>
+                                        </div>
+                                        <span
+                                                class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">north_east</span>
+                                </a>
+                                <a class="link-btn rounded-xl p-4 w-full flex items-center justify-between group cursor-pointer text-on-surface"
+                                        href="#">
+                                        <div class="flex items-center gap-4">
+                                                <div
+                                                        class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#f9ce34]/10 via-[#ee2a7b]/10 to-[#6228d7]/10 flex items-center justify-center relative overflow-hidden">
+                                                        <div
+                                                                class="absolute inset-0 opacity-20 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]">
+                                                        </div>
+                                                        <span class="material-symbols-outlined text-[#ee2a7b] z-10"
+                                                                style="font-variation-settings: 'FILL' 1;">photo_camera</span>
+                                                </div>
+                                                <div class="flex flex-col">
+                                                        <span
+                                                                class="font-label-sm text-label-sm text-secondary/70 uppercase tracking-widest">Instagram</span>
+                                                        <span class="font-body-md text-body-md text-on-surface/90">Nuestras
+                                                                colecciones</span>
+                                                </div>
+                                        </div>
+                                        <span
+                                                class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">north_east</span>
+                                </a>
+                                <a class="link-btn rounded-xl p-4 w-full flex items-center justify-between group cursor-pointer text-on-surface"
+                                        href="#">
+                                        <div class="flex items-center gap-4">
+                                                <div
+                                                        class="w-10 h-10 rounded-full bg-black/5 flex items-center justify-center text-ink-black">
+                                                        <!-- Using play_arrow as a proxy for generic video/tiktok -->
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                                </div>
+                                                <div class="flex flex-col">
+                                                        <span
+                                                                class="font-label-sm text-label-sm text-secondary/70 uppercase tracking-widest">Tiktok</span>
+                                                        <span class="font-body-md text-body-md text-on-surface/90">Síguenos
+                                                                y mira nuestros videos</span>
+                                                </div>
+                                        </div>
+                                        <span
+                                                class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">north_east</span>
+                                </a>
+                                <a class="link-btn rounded-xl p-4 w-full flex items-center justify-between group cursor-pointer text-on-surface"
+                                        href="#">
+                                        <div class="flex items-center gap-4">
+                                                <div
+                                                        class="w-10 h-10 rounded-full bg-[#1877F2]/10 flex items-center justify-center text-[#1877F2]">
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1;">public</span>
+                                                </div>
+                                                <div class="flex flex-col">
+                                                        <span
+                                                                class="font-label-sm text-label-sm text-secondary/70 uppercase tracking-widest">Facebook</span>
+                                                        <span class="font-body-md text-body-md text-on-surface/90">Página
+                                                                oficial</span>
+                                                </div>
+                                        </div>
+                                        <span
+                                                class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">north_east</span>
+                                </a>
+                                <a class="link-btn rounded-xl p-4 w-full flex items-center justify-between group cursor-pointer text-on-surface"
+                                        href="#">
+                                        <div class="flex items-center gap-4">
+                                                <div
+                                                        class="w-10 h-10 rounded-full bg-error/10 flex items-center justify-center text-error">
+                                                        <span class="material-symbols-outlined"
+                                                                style="font-variation-settings: 'FILL' 1;">location_on</span>
+                                                </div>
+                                                <div class="flex flex-col">
+                                                        <span
+                                                                class="font-label-sm text-label-sm text-secondary/70 uppercase tracking-widest">Ubicación</span>
+                                                        <span class="font-body-md text-body-md text-on-surface/90">Encuéntranos
+                                                                en el mapa</span>
+                                                </div>
+                                        </div>
+                                        <span
+                                                class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">north_east</span>
+                                </a>
+                        </div>
+                        <!-- Footer Indicator -->
+                        <div class="mt-section-gap pt-stack-md flex items-center justify-center w-full">
+                                <div
+                                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10">
+                                        <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                                        <span
+                                                class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Atención
+                                                disponible 24/7</span>
+                                </div>
+                        </div>
+                </div>
+        </main>
+</body>
+
+</html>

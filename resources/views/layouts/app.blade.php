@@ -30,7 +30,7 @@
                         "antique-gold": "#B38B4D",
                         "ink-black": "#1A1A1A",
                         "soft-gray": "#F5F5F5",
-                        "surface": "#fff8f7",
+                        "surface": "#FFFFFF",
                         "surface-variant": "#ebe0e0",
                         "on-surface": "#1f1a1b",
                         "on-surface-variant": "#514345",
@@ -51,6 +51,10 @@
         }
     </script>
     <style>
+        body {
+            background-color: #FFFFFF !important;
+        }
+
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
@@ -90,7 +94,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body class="bg-surface text-on-surface font-sans antialiased min-h-screen flex flex-col overflow-x-hidden"
+<body class="bg-white text-on-surface font-sans antialiased min-h-screen flex flex-col overflow-x-hidden"
     x-data="cartApp()"
     @add-to-cart.window="addToCart($event.detail.productId, $event.detail.variantId, $event.detail.quantity)">
 

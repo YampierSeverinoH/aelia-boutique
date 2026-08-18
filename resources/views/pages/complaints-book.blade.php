@@ -47,7 +47,30 @@
         </div>
 
         <div class="space-y-4 pt-4 border-t border-outline-variant/20">
-            <h3 class="font-serif text-lg text-primary border-b border-outline-variant/20 pb-2">2. Detalle de la Reclamación</h3>
+            <h3 class="font-serif text-lg text-primary border-b border-outline-variant/20 pb-2">2. Identificación del Bien Contratado</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="space-y-1">
+                    <label class="text-xs uppercase tracking-wider font-semibold text-on-surface-variant">Tipo de Bien *</label>
+                    <select name="contracted_type" required class="w-full text-xs rounded-lg border-outline-variant/50 focus:border-primary focus:ring-primary py-2.5 px-3">
+                        <option value="producto" selected>Producto (Prenda / Accesorio)</option>
+                        <option value="servicio">Servicio (Atención / Envío)</option>
+                    </select>
+                </div>
+                <div class="space-y-1">
+                    <label class="text-xs uppercase tracking-wider font-semibold text-on-surface-variant">Monto Reclamado (S/) *</label>
+                    <input type="number" step="0.01" name="amount" required placeholder="0.00" class="w-full text-xs rounded-lg border-outline-variant/50 focus:border-primary focus:ring-primary py-2.5 px-3">
+                </div>
+            </div>
+
+            <div class="space-y-1">
+                <label class="text-xs uppercase tracking-wider font-semibold text-on-surface-variant">Descripción del Bien o Servicio *</label>
+                <input type="text" name="description_good" required placeholder="Ej: Blusa Elegance Silk Rosada / Pedido #1002" class="w-full text-xs rounded-lg border-outline-variant/50 focus:border-primary focus:ring-primary py-2.5 px-3">
+            </div>
+        </div>
+
+        <div class="space-y-4 pt-4 border-t border-outline-variant/20">
+            <h3 class="font-serif text-lg text-primary border-b border-outline-variant/20 pb-2">3. Detalle de la Reclamación y Pedido</h3>
 
             <div class="space-y-1">
                 <label class="text-xs uppercase tracking-wider font-semibold text-on-surface-variant">Tipo de Registro *</label>
@@ -58,14 +81,19 @@
                     </label>
                     <label class="flex items-center gap-2 cursor-pointer">
                         <input type="radio" name="complaint_type" value="queja" class="text-primary focus:ring-primary">
-                        <span><strong>Queja</strong> (Disconformidad no relacionada directamente a los productos)</span>
+                        <span><strong>Queja</strong> (Disconformidad relacionada a la atención)</span>
                     </label>
                 </div>
             </div>
 
             <div class="space-y-1">
-                <label class="text-xs uppercase tracking-wider font-semibold text-on-surface-variant">Descripción Detallada *</label>
-                <textarea name="description" rows="5" required placeholder="Detalla claramente los hechos de tu reclamo o queja..." class="w-full text-xs rounded-lg border-outline-variant/50 focus:border-primary focus:ring-primary py-2.5 px-3"></textarea>
+                <label class="text-xs uppercase tracking-wider font-semibold text-on-surface-variant">Detalle de la Reclamación o Queja *</label>
+                <textarea name="description" rows="4" required placeholder="Detalla claramente los hechos de tu reclamo o queja..." class="w-full text-xs rounded-lg border-outline-variant/50 focus:border-primary focus:ring-primary py-2.5 px-3"></textarea>
+            </div>
+
+            <div class="space-y-1">
+                <label class="text-xs uppercase tracking-wider font-semibold text-on-surface-variant">Pedido o Solución Solicitada *</label>
+                <textarea name="consumer_request" rows="3" required placeholder="Indica el pedido o solución concreta que solicitas (cambio, reembolso, etc.)..." class="w-full text-xs rounded-lg border-outline-variant/50 focus:border-primary focus:ring-primary py-2.5 px-3"></textarea>
             </div>
         </div>
 

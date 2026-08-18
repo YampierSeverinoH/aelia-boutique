@@ -113,6 +113,19 @@ class CheckoutController extends Controller
 
         $this->cartService->clear();
 
+        try {
+            $company = \App\Models\Company::first();
+            $adminEmail = optional($company)->correo_notificaciones ?: (optional($company)->correo ?: 'notificaciones@aeliastore.pe');
+
+            // 1. Notificar al cliente con PDF adjunto
+            \Illuminate\Support\Facades\Mail::to($order->customer_email)->send(new \App\Mail\OrderConfirmationCustomerMail($order));
+
+            // 2. Notificar al correo configurado de empresa
+            \Illuminate\Support\Facades\Mail::to($adminEmail)->send(new \App\Mail\OrderNotificationAdminMail($order));
+        } catch (\Throwable $e) {
+            \Illuminate\Support\Facades\Log::error('Error enviando correos de pedido: ' . $e->getMessage());
+        }
+
         return redirect()->route('checkout.confirmation', $order->order_number);
     }
 
