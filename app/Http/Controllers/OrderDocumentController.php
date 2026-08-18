@@ -15,6 +15,10 @@ class OrderDocumentController extends Controller
      */
     public function pdf(Order $order)
     {
+        if (!file_exists(storage_path('fonts'))) {
+            @mkdir(storage_path('fonts'), 0777, true);
+        }
+
         $company = Company::first();
         $bankAccounts = BankAccount::active()->get();
 
@@ -28,6 +32,10 @@ class OrderDocumentController extends Controller
      */
     public function ticket(Order $order)
     {
+        if (!file_exists(storage_path('fonts'))) {
+            @mkdir(storage_path('fonts'), 0777, true);
+        }
+
         $company = Company::first();
         $bankAccounts = BankAccount::active()->get();
 
