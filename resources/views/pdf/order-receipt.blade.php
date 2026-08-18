@@ -30,7 +30,7 @@
     <div class="header">
         <div class="title-box">
             <div class="order-num">PEDIDO #{{ $order->order_number }}</div>
-            <div style="font-size: 10px; color: #666;">Fecha: {{ $order->created_at->format('d/m/Y H:i') }}</div>
+            <div style="font-size: 10px; color: #666;">Fecha: {{ optional($order->created_at)->format('d/m/Y H:i') ?? date('d/m/Y H:i') }}</div>
         </div>
         <div class="logo">Aelia Boutique</div>
         <div class="subtitle">Elegancia & Sofisticación en Cada Detalle</div>

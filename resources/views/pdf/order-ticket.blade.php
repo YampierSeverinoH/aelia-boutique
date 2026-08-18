@@ -106,7 +106,7 @@
     <div class="divider"></div>
 
     <div>
-        <div><strong>Fecha:</strong> {{ $order->created_at->format('d/m/Y H:i') }}</div>
+        <div><strong>Fecha:</strong> {{ optional($order->created_at)->format('d/m/Y H:i') ?? date('d/m/Y H:i') }}</div>
         <div><strong>Cliente:</strong> {{ $order->customer_name }}</div>
         @if ($order->customer_dni)
             <div><strong>DNI/RUC:</strong> {{ $order->customer_dni }}</div>
