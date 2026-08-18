@@ -44,3 +44,8 @@ Route::post('/contacto/enviar', [PageController::class, 'processContact'])->name
 Route::get('/terminos-y-condiciones', [PageController::class, 'terms'])->name('pages.terms');
 Route::get('/libro-de-reclamaciones', [PageController::class, 'complaintsBook'])->name('pages.complaints-book');
 Route::post('/libro-de-reclamaciones/enviar', [PageController::class, 'processComplaint'])->name('pages.complaints-book.store');
+
+// Documentos e Impresión de Pedidos (PDF y Ticket 80mm)
+Route::get('/admin/pedidos/{order}/pdf', [\App\Http\Controllers\OrderDocumentController::class, 'pdf'])->name('admin.orders.pdf');
+Route::get('/admin/pedidos/{order}/ticket', [\App\Http\Controllers\OrderDocumentController::class, 'ticket'])->name('admin.orders.ticket');
+

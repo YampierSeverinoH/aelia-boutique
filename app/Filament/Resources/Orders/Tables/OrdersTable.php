@@ -2,9 +2,13 @@
 
 namespace App\Filament\Resources\Orders\Tables;
 
+use App\Models\Order;
+use Filament\Actions\Action;
+use Filament\Actions\ActionGroup;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
+use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
@@ -73,7 +77,24 @@ class OrdersTable
                     ]),
             ])
             ->recordActions([
-                EditAction::make(),
+                ActionGroup::make([
+                    EditAction::make()
+                        ->label('Editar Pedido'),
+                    Action::make('pdf')
+                        ->label('Generar PDF')
+                        ->icon(Heroicon::OutlinedDocumentText)
+                        ->color('primary')
+                        ->url(fn (Order $record): string => route('admin.orders.pdf', $record))
+                        ->openUrlInNewTab(),
+                    Action::make('ticket')
+                        ->label('Generar Ticket')
+                        ->icon(Heroicon::OutlinedReceiptPercent)
+                        ->color('success')
+                        ->url(fn (Order $record): string => route('admin.orders.ticket', $record))
+                        ->openUrlInNewTab(),
+                ])
+                ->icon(Heroicon::OutlinedEllipsisVertical)
+                ->tooltip('Acciones del Pedido'),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

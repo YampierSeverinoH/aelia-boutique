@@ -64,6 +64,35 @@ class FrontendStorefrontTest extends TestCase
             ->assertSee($product->name);
     }
 
+    public function test_order_pdf_and_ticket_generation(): void
+    {
+        $order = \App\Models\Order::create([
+            'order_number' => 'AEL-999999',
+            'customer_name' => 'Test Cliente PDF',
+            'customer_email' => 'pdf@example.com',
+            'customer_phone' => '900000000',
+            'customer_dni' => '12345678',
+            'shipping_address' => 'Av. Javier Prado 100',
+            'region' => 'Lima',
+            'province' => 'Lima',
+            'district' => 'San Isidro',
+            'subtotal' => 100.00,
+            'shipping_cost' => 10.00,
+            'total' => 110.00,
+            'payment_method' => 'bank_transfer',
+            'payment_status' => 'pending',
+            'order_status' => 'pending',
+        ]);
+
+        $pdfResponse = $this->get("/admin/pedidos/{$order->id}/pdf");
+        $pdfResponse->assertStatus(200);
+        $pdfResponse->assertHeader('content-type', 'application/pdf');
+
+        $ticketResponse = $this->get("/admin/pedidos/{$order->id}/ticket");
+        $ticketResponse->assertStatus(200);
+        $ticketResponse->assertHeader('content-type', 'application/pdf');
+    }
+
     public function test_cart_add_and_json_endpoint(): void
     {
         $product = Product::first();
